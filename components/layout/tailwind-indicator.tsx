@@ -1,7 +1,5 @@
-import { env } from "@/env"
-
 export function TailwindIndicator() {
-  if (env.NODE_ENV === "production") return null
+  if (process.env.NODE_ENV === "production") return null
 
   return (
     <div className="fixed bottom-1 left-1 z-50 flex items-center gap-2">
