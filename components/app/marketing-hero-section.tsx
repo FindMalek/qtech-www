@@ -29,7 +29,7 @@ export function MarketingHeroSection() {
           <div className="flex flex-wrap items-center justify-center gap-2.5">
             <Link
               href={hero.cta.primary.href}
-              className="bg-secondary text-primary dark:text-secondary-foreground hover:bg-secondary/80 flex h-9 w-32 items-center justify-center rounded-full border border-white/[0.12] px-4 text-sm font-normal tracking-wide shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] transition-all ease-out active:scale-95"
+              className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/80 flex h-9 items-center justify-center rounded-full border border-white/[0.12] px-4 text-sm font-normal tracking-wide shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] transition-all ease-out active:scale-95"
             >
               {hero.cta.primary.text}
             </Link>

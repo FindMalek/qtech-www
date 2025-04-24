@@ -133,7 +133,7 @@ export function MarketingPricingSection() {
                 <p className="text-sm">
                   {tier.name}
                   {tier.isPopular && (
-                    <span className="from-secondary/50 to-secondary ml-2 inline-flex h-6 w-fit items-center justify-center rounded-full bg-gradient-to-b from-[1.92%] to-[100%] px-2 text-sm text-white shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.08),0px_3px_3px_-1.5px_rgba(0,0,0,0.08),0px_1px_1px_-0.5px_rgba(0,0,0,0.08),0px_0px_0px_1px_rgba(255,255,255,0.12)_inset,0px_1px_0px_0px_rgba(255,255,255,0.12)_inset]">
+                    <span className="from-secondary/50 to-secondary text-secondary-foreground ml-2 inline-flex h-6 w-fit items-center justify-center rounded-full bg-gradient-to-b from-[1.92%] to-[100%] px-2 text-sm shadow-[0px_6px_6px_-3px_rgba(0,0,0,0.08),0px_3px_3px_-1.5px_rgba(0,0,0,0.08),0px_1px_1px_-0.5px_rgba(0,0,0,0.08),0px_0px_0px_1px_rgba(255,255,255,0.12)_inset,0px_1px_0px_0px_rgba(255,255,255,0.12)_inset]">
                       Popular
                     </span>
                   )}
