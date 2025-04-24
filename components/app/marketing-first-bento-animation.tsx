@@ -62,7 +62,7 @@ export function MarketingFirstBentoAnimation() {
       >
         <div className="flex items-end justify-end gap-3">
           <motion.div
-            className="bg-secondary ml-auto max-w-[280px] rounded-2xl p-4 text-white shadow-[0_0_10px_rgba(0,0,0,0.05)]"
+            className="bg-secondary text-secondary-foreground ml-auto max-w-[280px] rounded-2xl p-4 shadow-[0_0_10px_rgba(0,0,0,0.05)]"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
@@ -85,7 +85,7 @@ export function MarketingFirstBentoAnimation() {
         </div>
         <div className="flex items-start gap-2">
           <div className="bg-background border-border flex size-10 flex-shrink-0 items-center justify-center rounded-full border shadow-[0_0_10px_rgba(0,0,0,0.05)]">
-            <Icons.logo className="size-4" />
+            <Icons.logo className="fill-secondary-foreground size-4" />
           </div>
 
           <div className="relative">

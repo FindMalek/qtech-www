@@ -731,7 +731,7 @@ export const siteConfig: SiteConfig = {
         ],
         description: "Ideal for professionals and small teams",
         buttonText: "Upgrade to Pro",
-        buttonColor: "bg-secondary text-white",
+        buttonColor: "bg-muted-foreground/20 text-secondary-foreground",
         isPopular: true,
       },
       {

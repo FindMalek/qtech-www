@@ -1,7 +1,7 @@
 export default async function sitemap() {
   try {
     const currentDate = new Date().toISOString()
-    
+
     const baseUrls = [
       {
         url: "https://www.findmalek.com/",

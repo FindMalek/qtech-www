@@ -3,14 +3,17 @@
 import { useState } from "react"
 import { motion } from "motion/react"
 
+import { BillingCycle, LIST_OF_BILLING_CYCLES } from "@/types/enum"
+
+import { convertBillingCycleToPrice } from "@/config/converter"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 
 import { SectionHeader } from "@/components/shared/section-header"
 
 interface TabsProps {
-  activeTab: "yearly" | "monthly"
-  setActiveTab: (tab: "yearly" | "monthly") => void
+  activeTab: BillingCycle
+  setActiveTab: (tab: BillingCycle) => void
   className?: string
 }
 
@@ -22,10 +25,10 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
         className
       )}
     >
-      {["monthly", "yearly"].map((tab) => (
+      {LIST_OF_BILLING_CYCLES.map((tab) => (
         <button
           key={tab}
-          onClick={() => setActiveTab(tab as "yearly" | "monthly")}
+          onClick={() => setActiveTab(tab as BillingCycle)}
           className={cn(
             "relative z-[1] flex h-8 cursor-pointer items-center justify-center px-2",
             {
@@ -54,7 +57,7 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
             {tab === "yearly" && (
-              <span className="text-secondary bg-secondary/15 ml-2 w-[calc(100%+1rem)] rounded-full px-1 py-0.5 text-xs font-semibold">
+              <span className="text-secondary-foreground/40 bg-secondary/15 ml-2 w-[calc(100%+1rem)] rounded-full px-1 py-0.5 text-xs font-semibold">
                 -20%
               </span>
             )}
@@ -66,9 +69,7 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
 }
 
 export function MarketingPricingSection() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
-    "monthly"
-  )
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly")
 
   // Update price animation
   const PriceDisplay = ({
@@ -140,7 +141,7 @@ export function MarketingPricingSection() {
                 <div className="mt-2 flex items-baseline">
                   <PriceDisplay tier={tier} />
                   <span className="ml-2">
-                    /{billingCycle === "yearly" ? "year" : "month"}
+                    /{convertBillingCycleToPrice(billingCycle)}
                   </span>
                 </div>
                 <p className="mt-2 text-sm">{tier.description}</p>

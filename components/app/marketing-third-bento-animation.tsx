@@ -10,7 +10,6 @@ interface LineChartProps {
   data: number[]
   height?: number
   width?: number
-  color: string
   shouldAnimate: boolean
   startAnimationDelay?: number
 }
@@ -19,10 +18,11 @@ export function LineChart({
   data,
   height = 200,
   width = 600,
-  color,
   shouldAnimate,
   startAnimationDelay,
 }: LineChartProps) {
+  // set color to red
+  const color = "var(--secondary-foreground)"
   const svgRef = useRef<SVGSVGElement>(null)
 
   // Create smooth curve points using bezier curves
@@ -95,6 +95,7 @@ export function LineChart({
   }, [color])
 
   const getColorWithOpacity = useCallback(
+    // color computer should be red
     (opacity: number) => colorWithOpacity(computedColor, opacity),
     [computedColor]
   )
@@ -265,7 +266,7 @@ export function MarketingNumberFlowCounter({
 export function MarketingThirdBentoAnimation({
   data,
   toolTipValues,
-  color = "var(--secondary)",
+  color = "var(--secondary-foreground)",
   startAnimationDelay = 0,
   once = false,
 }: {
@@ -310,7 +311,7 @@ export function MarketingThirdBentoAnimation({
           delay: startAnimationDelay ? startAnimationDelay + 0.3 : 0.3,
           ease: "easeOut",
         }}
-        className="absolute left-1/2 top-[60%] h-32 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[var(--color)] to-[var(--color-transparent)]"
+        className="from-secondary/90 to-primary absolute left-1/2 top-[60%] h-32 w-[2px] -translate-x-1/2 bg-gradient-to-b"
       ></motion.div>
       <MarketingNumberFlowCounter
         toolTipValues={toolTipValues}
@@ -321,7 +322,7 @@ export function MarketingThirdBentoAnimation({
         data={data}
         height={200}
         width={600}
-        color={computedColor}
+        // color={computedColor}
         shouldAnimate={shouldAnimate}
         startAnimationDelay={startAnimationDelay}
       />

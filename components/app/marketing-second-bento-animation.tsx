@@ -8,7 +8,7 @@ export function MarketingSecondBentoAnimation() {
       <div className="from-background pointer-events-none absolute left-0 top-0 z-20 h-20 w-full bg-gradient-to-b to-transparent"></div>
 
       <div className="bg-secondary absolute left-1/2 top-1/2 z-30 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 rounded-full p-2 md:bottom-0 md:top-auto">
-        <Icons.logo className="size-10 fill-white" />
+        <Icons.logo className="fill-secondary-foreground size-10" />
       </div>
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
         <div className="relative flex h-full w-full translate-y-0 items-center justify-center md:translate-y-32">

@@ -10,7 +10,7 @@ export function Highlight({
   return (
     <span
       className={cn(
-        "text-secondary p-1 py-0.5 font-medium dark:font-semibold",
+        "bg-primary/10 text-primary rounded-sm px-1.5 py-0.5 font-medium dark:font-semibold",
         className
       )}
     >
