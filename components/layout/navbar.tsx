@@ -83,7 +83,9 @@ export function Navbar() {
           <div className="flex h-[56px] items-center justify-between p-4">
             <Link href="/" className="flex items-center gap-3">
               <Icons.logo className="size-7 md:size-10" />
-              <p className="text-primary text-lg font-semibold">SkyAgent</p>
+              <p className="text-primary text-lg font-semibold">
+                {siteConfig.name}
+              </p>
             </Link>
 
             <NavMenu />
@@ -140,7 +142,7 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Icons.logo className="size-7 md:size-10" />
                     <p className="text-primary text-lg font-semibold">
-                      SkyAgent
+                      {siteConfig.name}
                     </p>
                   </Link>
                   <button

@@ -11,55 +11,55 @@ import { FlickeringGrid } from "@/components/ui/flickering-grid"
 import { Globe } from "@/components/ui/globe"
 
 export const siteConfig: SiteConfig = {
-  name: "Tunisian Design Engineer and Developer",
+  name: "QTech",
   description:
-    "Expert in web development, design engineering, and creative entrepreneurship. Passionate about turning code into impactful projects. Explore my work and ventures.",
-  url: "https://www.findmalek.com",
+    "Cutting-edge AI solutions for businesses. Empower your workflow with private AI knowledge bases, seamless integrations, and smart automation tools.",
+  url: "https://www.qtech.ai",
   images: {
-    default: "https://www.findmalek.com/og.png",
-    notFound: "https://www.findmalek.com/not-found.png",
-    logo: "https://www.findmalek.com/author.jpg",
+    default: "https://www.qtech.ai/og.png",
+    notFound: "https://www.qtech.ai/not-found.png",
+    logo: "https://www.qtech.ai/logo.jpg",
   },
   links: {
-    twitter: "https://go.findmalek.com/x",
-    github: "https://go.findmalek.com/gh",
-    facebook: "https://go.findmalek.com/fb",
-    instagram: "https://go.findmalek.com/ig",
-    linkedin: "https://go.findmalek.com/li",
-    spotify: "https://go.findmalek.com/sp",
-    resume: "https://go.findmalek.com/cv",
+    twitter: "https://twitter.com/qtech",
+    github: "https://github.com/qtech",
+    facebook: "https://facebook.com/qtechAI",
+    instagram: "https://instagram.com/qtech",
+    linkedin: "https://linkedin.com/company/qtech",
+    contact: "https://www.qtech.ai/contact",
+    demo: "https://www.qtech.ai/demo",
   },
   author: {
-    name: "Malek Gara-Hellal",
-    url: "https://www.findmalek.com",
-    email: "hi@findmalek.com",
-    github: "https://go.findmalek.com/gh",
+    name: "QTech Team",
+    url: "https://www.qtech.ai",
+    email: "info@qtech.ai",
+    github: "https://github.com/qtech",
   },
   keywords: [
-    "Web Development",
-    "Design Engineering",
-    "Creative Entrepreneurship",
-    "Project Management",
-    "Innovative Solutions",
-    "Business Ventures",
-    "Technology",
-    "Software Development",
+    "AI Solutions",
+    "Enterprise AI",
+    "Knowledge Bases",
+    "AI Agents",
+    "Business Intelligence",
+    "Workflow Automation",
+    "AI Integration",
+    "Machine Learning",
+    "Data Analytics",
     "Digital Transformation",
-    "Startups",
-    "Tech Entrepreneur",
-    "Innovation",
-    "Product Development",
-    "User Experience",
-    "Agile Methodologies",
+    "Private AI",
+    "Secure AI",
+    "AI Assistant",
+    "Business Automation",
+    "Smart Workflows",
+    "AI-Driven Insights",
+    "Real-time Collaboration",
+    "Enterprise Software",
+    "SaaS",
     "MobX",
-    "Zustand",
-    "tRPC",
-    "T3 Stack",
-    "Prisma",
-    "TailwindCSS",
-    "Shadcn",
     "Next.js",
     "React",
+    "TypeScript",
+    "T3 Stack",
   ],
   nav: {
     links: [
@@ -84,17 +84,17 @@ export const siteConfig: SiteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "Introducing Privatised AI Knowledge Bases",
-    title: "Your Partner for Safe, Accurate Internal AI",
+    badge: "Enterprise AI Knowledge Base Solutions",
+    title: "Secure, Intelligent AI for Your Business",
     description:
-      "Your ready to act Partner that understand and can act on your internal data, tools, and processes—without compromising on privacy or control. ",
+      "QTech delivers AI solutions that understand and act on your internal data, tools, and processes—without compromising on privacy or security.",
     cta: {
       primary: {
-        text: "Request demo",
+        text: "Get a Demo",
         href: "#",
       },
       secondary: {
-        text: "Log in",
+        text: "Learn More",
         href: "#",
       },
     },
@@ -301,23 +301,23 @@ export const siteConfig: SiteConfig = {
     ],
   },
   bentoSection: {
-    title: "Empower Your Workflow with AI",
+    title: "Transform Your Workflow with QTech AI",
     description:
-      "Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to streamline your operations.",
+      "Our AI solutions deliver real-time collaboration, seamless integrations, and actionable insights to streamline your business operations.",
     items: [
       {
         id: 1,
         content: <MarketingFirstBentoAnimation />,
-        title: "Real-time AI Collaboration",
+        title: "Secure AI Collaboration",
         description:
-          "Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment.",
+          "Experience real-time assistance with enterprise-grade security. QTech's AI coordinates tasks, answers questions, and maintains team alignment.",
       },
       {
         id: 2,
         content: <MarketingSecondBentoAnimation />,
-        title: "Seamless Integrations",
+        title: "Enterprise Integrations",
         description:
-          "Unite your favorite tools for effortless connectivity. Boost productivity through interconnected workflows.",
+          "Connect QTech with your existing business tools for seamless workflows. Boost productivity through secure, interconnected systems.",
       },
       {
         id: 3,
@@ -329,64 +329,64 @@ export const siteConfig: SiteConfig = {
             ]}
           />
         ),
-        title: "Instant Insight Reporting",
+        title: "Business Intelligence",
         description:
-          "Transform raw data into clear insights in seconds. Empower smarter decisions with real-time, always-learning intelligence.",
+          "Transform raw business data into clear, actionable insights in seconds. Make smarter decisions with real-time, AI-powered intelligence.",
       },
       {
         id: 4,
         content: <MarketingFourthBentoAnimation once={false} />,
-        title: "Smart Automation",
+        title: "Workflow Automation",
         description:
-          "Set it, forget it. Your AI Agent tackles repetitive tasks so you can focus on strategy, innovation, and growth.",
+          "Automate repetitive processes with QTech's intelligent AI. Focus your team on strategy, innovation, and growth while we handle the routine.",
       },
     ],
   },
   quoteSection: {
     quote:
-      "SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.",
+      "QTech has transformed our daily operations. Tasks that once consumed hours now complete in minutes, freeing our team to focus on creativity and strategic growth. The private knowledge base ensures our data stays secure while delivering powerful insights.",
     author: {
-      name: "Alex Johnson",
-      role: "CTO, Innovatech",
-      image: "https://randomuser.me/api/portraits/men/91.jpg",
+      name: "Michael Chen",
+      role: "CTO, Enterprise Solutions Inc.",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
     },
   },
   featureSection: {
-    title: "Simple. Seamless. Smart.",
+    title: "Powerful. Secure. Intelligent.",
     description:
-      "Discover how SkyAgent transforms your commands into action in four easy steps",
+      "Discover how QTech's AI solutions transform your business operations in four simple steps",
     items: [
       {
         id: 1,
-        title: "Ask Your AI Agent Directly",
+        title: "Secure Data Integration",
         content:
-          "Speak or type your command—let SkyAgent capture your intent. Your request instantly sets the process in motion.",
+          "Connect QTech to your business data sources with enterprise-grade security and privacy controls. Your data remains private and protected.",
         image:
-          "https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop",
       },
       {
         id: 2,
-        title: "Let SkyAgent Process It",
+        title: "AI-Powered Analysis",
         content:
-          "We prioritize the needs and preferences of our users in our design process.",
+          "Our advanced algorithms analyze your business data to deliver actionable insights, identify patterns, and recommend optimal solutions.",
         image:
-          "https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
       },
       {
         id: 3,
-        title: "Receive Instant, Actionable Results",
+        title: "Intelligent Automation",
         content:
-          "Our features seamlessly integrate with your existing systems for a smooth experience.",
+          "Automate routine tasks and workflows with QTech's AI, freeing your team to focus on high-value activities and strategic initiatives.",
         image:
-          "https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070&auto=format&fit=crop",
       },
       {
         id: 4,
         title: "Continuous Improvement",
         content:
-          "We are constantly updating and improving our features to provide the best experience.",
+          "QTech's AI learns from your business operations, constantly improving its effectiveness and adapting to your evolving needs.",
         image:
-          "https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+          "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?q=80&w=2039&auto=format&fit=crop",
       },
     ],
   },
@@ -692,62 +692,63 @@ export const siteConfig: SiteConfig = {
     ],
   },
   pricing: {
-    title: "Pricing that scales with you",
+    title: "Simple Pricing for Every Business",
     description:
-      "Whichever plan you pick, it's free until you love your docs. That's our promise.",
+      "Choose the plan that fits your organization's needs. All plans include a free trial period.",
     pricingItems: [
       {
-        name: "Free",
+        name: "Starter",
         href: "#",
-        price: "$0",
+        price: "$499",
         period: "month",
-        yearlyPrice: "$0",
+        yearlyPrice: "$4,990",
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
+          "Private knowledge base",
+          "Basic AI assistant",
+          "5 team members",
+          "Standard support",
         ],
-        description: "Perfect for individual users",
-        buttonText: "Start Free",
+        description: "Perfect for small teams and startups",
+        buttonText: "Start Free Trial",
         buttonColor: "bg-accent text-primary",
         isPopular: false,
       },
       {
-        name: "Startup",
+        name: "Business",
         href: "#",
-        price: "$12",
+        price: "$999",
         period: "month",
-        yearlyPrice: "$120",
+        yearlyPrice: "$9,990",
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
-          "E-commerce integration",
-          "User authentication system",
-          "Multi-language support",
-          "Real-time collaboration tools",
+          "Enhanced private knowledge base",
+          "Advanced AI assistant",
+          "Unlimited team members",
+          "Priority support",
+          "Custom integrations",
+          "Workflow automation",
+          "Analytics dashboard",
+          "API access",
         ],
-        description: "Ideal for professionals and small teams",
-        buttonText: "Upgrade to Pro",
+        description: "Ideal for growing businesses and enterprises",
+        buttonText: "Start Free Trial",
         buttonColor: "bg-muted-foreground/20 text-secondary-foreground",
         isPopular: true,
       },
       {
         name: "Enterprise",
         href: "#",
-        price: "$24",
+        price: "Custom",
         period: "month",
-        yearlyPrice: "$240",
+        yearlyPrice: "Custom",
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components librarys",
-          "Real-time collaboration tools",
+          "Full-featured private knowledge base",
+          "Enterprise-grade AI assistant",
+          "Unlimited team members",
+          "24/7 premium support",
+          "Custom development",
+          "Advanced security features",
         ],
-        description: "Best for large teams and enterprise-level organizations",
+        description: "Tailored solutions for large organizations",
         buttonText: "Contact Sales",
         buttonColor: "bg-primary text-primary-foreground",
         isPopular: false,
@@ -757,123 +758,122 @@ export const siteConfig: SiteConfig = {
   testimonials: [
     {
       id: "1",
-      name: "Alex Rivera",
-      role: "CTO at InnovateTech",
-      img: "https://randomuser.me/api/portraits/men/91.jpg",
+      name: "David Chen",
+      role: "CTO at EnterpriseOne",
+      img: "https://randomuser.me/api/portraits/men/22.jpg",
       description: (
         <p>
-          The AI-driven analytics from #QuantumInsights have revolutionized our
-          product development cycle.
+          QTech's AI knowledge base has revolutionized our internal operations.
           <Highlight>
-            Insights are now more accurate and faster than ever.
+            Our team now finds answers 5x faster than before.
           </Highlight>{" "}
-          A game-changer for tech companies.
+          A game-changer for enterprise efficiency.
         </p>
       ),
     },
     {
       id: "2",
-      name: "Samantha Lee",
-      role: "Marketing Director at NextGen Solutions",
-      img: "https://randomuser.me/api/portraits/women/12.jpg",
+      name: "Sarah Miller",
+      role: "VP of Operations at Global Solutions",
+      img: "https://randomuser.me/api/portraits/women/23.jpg",
       description: (
         <p>
-          Implementing #AIStream&apos;s customer prediction model has
-          drastically improved our targeting strategy.
-          <Highlight>Seeing a 50% increase in conversion rates!</Highlight>{" "}
-          Highly recommend their solutions.
+          Implementing QTech's workflow automation has drastically improved our
+          process efficiency.
+          <Highlight>We've reduced processing time by 65%!</Highlight> Would
+          highly recommend for any enterprise looking to scale.
         </p>
       ),
     },
     {
       id: "3",
-      name: "Raj Patel",
-      role: "Founder & CEO at StartUp Grid",
+      name: "James Wilson",
+      role: "CEO at TechForward",
       img: "https://randomuser.me/api/portraits/men/45.jpg",
       description: (
         <p>
-          As a startup, we need to move fast and stay ahead. #CodeAI&apos;s
-          automated coding assistant helps us do just that.
-          <Highlight>Our development speed has doubled.</Highlight> Essential
-          tool for any startup.
+          As a fast-growing company, we need reliable AI solutions. QTech
+          delivers exactly what we need.
+          <Highlight>
+            The security features are unmatched in the industry.
+          </Highlight>{" "}
+          Essential tool for any modern business.
         </p>
       ),
     },
     {
       id: "4",
-      name: "Emily Chen",
-      role: "Product Manager at Digital Wave",
-      img: "https://randomuser.me/api/portraits/women/83.jpg",
+      name: "Emily Zhang",
+      role: "Director of IT at MultiNational Corp",
+      img: "https://randomuser.me/api/portraits/women/33.jpg",
       description: (
         <p>
-          #VoiceGen&apos;s AI-driven voice synthesis has made creating global
-          products a breeze.
-          <Highlight>Localization is now seamless and efficient.</Highlight> A
-          must-have for global product teams.
+          QTech's enterprise integrations made connecting to our existing
+          systems seamless.
+          <Highlight>Implementation was faster than we expected.</Highlight> A
+          must-have for enterprise IT infrastructure.
         </p>
       ),
     },
     {
       id: "5",
-      name: "Michael Brown",
-      role: "Data Scientist at FinTech Innovations",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
+      name: "Michael Rodriguez",
+      role: "Head of Analytics at FinTech Innovations",
+      img: "https://randomuser.me/api/portraits/men/4.jpg",
       description: (
         <p>
-          Leveraging #DataCrunch&apos;s AI for our financial models has given us
-          an edge in predictive accuracy.
+          Leveraging QTech's AI for our financial data analysis has transformed
+          our decision-making process.
           <Highlight>
-            Our investment strategies are now powered by real-time data
-            analytics.
+            Our insights are now backed by real-time AI-powered analytics.
           </Highlight>{" "}
-          Transformative for the finance industry.
+          Transformative for data-driven companies.
         </p>
       ),
     },
     {
       id: "6",
-      name: "Linda Wu",
-      role: "VP of Operations at LogiChain Solutions",
+      name: "Linda Kumar",
+      role: "VP of Supply Chain at LogiTech Solutions",
       img: "https://randomuser.me/api/portraits/women/5.jpg",
       description: (
         <p>
-          #LogiTech&apos;s supply chain optimization tools have drastically
-          reduced our operational costs.
+          QTech's supply chain optimization tools have significantly reduced our
+          operational costs.
           <Highlight>
-            Efficiency and accuracy in logistics have never been better.
+            Our logistics efficiency has improved by 40% since implementation.
           </Highlight>{" "}
         </p>
       ),
     },
     {
       id: "7",
-      name: "Carlos Gomez",
-      role: "Head of R&D at EcoInnovate",
-      img: "https://randomuser.me/api/portraits/men/14.jpg",
+      name: "Robert Park",
+      role: "Sustainability Director at GreenTech",
+      img: "https://randomuser.me/api/portraits/men/65.jpg",
       description: (
         <p>
-          By integrating #GreenTech&apos;s sustainable energy solutions,
-          we&apos;ve seen a significant reduction in carbon footprint.
+          By integrating QTech's analytics platform, we've achieved our
+          sustainability goals ahead of schedule.
           <Highlight>
-            Leading the way in eco-friendly business practices.
+            Their AI helped us identify efficiency opportunities we had missed.
           </Highlight>{" "}
-          Pioneering change in the industry.
+          Pioneering change in our industry.
         </p>
       ),
     },
     {
       id: "8",
-      name: "Aisha Khan",
-      role: "Chief Marketing Officer at Fashion Forward",
+      name: "Priya Sharma",
+      role: "CMO at Retail Innovations",
       img: "https://randomuser.me/api/portraits/women/56.jpg",
       description: (
         <p>
-          #TrendSetter&apos;s market analysis AI has transformed how we approach
-          fashion trends.
+          QTech's customer analytics has transformed our marketing strategy.
           <Highlight>
-            Our campaigns are now data-driven with higher customer engagement.
+            Our campaigns are now data-driven with 35% higher engagement rates.
           </Highlight>{" "}
-          Revolutionizing fashion marketing.
+          Revolutionary for modern marketing teams.
         </p>
       ),
     },
@@ -955,6 +955,85 @@ export const siteConfig: SiteConfig = {
         </p>
       ),
     },
+    {
+      id: "9",
+      name: "Thomas Wilson",
+      role: "Director of Innovation at HealthTech Solutions",
+      img: "https://randomuser.me/api/portraits/men/18.jpg",
+      description: (
+        <p>
+          Implementing QTech's secure AI in our healthcare systems has improved
+          patient care metrics significantly.
+          <Highlight>
+            All while maintaining strict HIPAA compliance and data security.
+          </Highlight>{" "}
+          A milestone in healthcare technology.
+        </p>
+      ),
+    },
+    {
+      id: "10",
+      name: "Sophia Martinez",
+      role: "CEO at EduTech Innovations",
+      img: "https://randomuser.me/api/portraits/women/73.jpg",
+      description: (
+        <p>
+          QTech's learning solution has transformed our educational platform.
+          <Highlight>
+            Student engagement metrics have increased by 75% since
+            implementation.
+          </Highlight>{" "}
+          Transforming the educational landscape.
+        </p>
+      ),
+    },
+    {
+      id: "11",
+      name: "Jack Thompson",
+      role: "CISO at SecureNet",
+      img: "https://randomuser.me/api/portraits/men/25.jpg",
+      description: (
+        <p>
+          QTech's security framework meets our stringent enterprise
+          requirements.
+          <Highlight>
+            We can confidently leverage AI while maintaining strict data
+            protection.
+          </Highlight>{" "}
+          Setting a new standard in secure AI.
+        </p>
+      ),
+    },
+    {
+      id: "12",
+      name: "Nadia Khan",
+      role: "Director of Digital Transformation",
+      img: "https://randomuser.me/api/portraits/women/78.jpg",
+      description: (
+        <p>
+          QTech has been central to our digital transformation journey.
+          <Highlight>
+            Their integration capabilities are truly enterprise-class.
+          </Highlight>{" "}
+          A perfect partner for complex organizations.
+        </p>
+      ),
+    },
+    {
+      id: "13",
+      name: "Omar Hassan",
+      role: "Founder at Tech Innovators",
+      img: "https://randomuser.me/api/portraits/men/54.jpg",
+      description: (
+        <p>
+          QTech's AI platform has been invaluable for our growth strategy.
+          <Highlight>
+            Their private knowledge base technology is unmatched in the market.
+          </Highlight>{" "}
+          A catalyst for business success.
+        </p>
+      ),
+    },
   ],
   footerLinks: [
     {
@@ -987,54 +1066,54 @@ export const siteConfig: SiteConfig = {
   ],
   ctaSection: {
     id: "cta",
-    title: "Automate. Simplify. Thrive",
+    title: "Upgrade Your Business with AI",
     backgroundImage: "/agent-cta-background.png",
     button: {
-      text: "Start Your 30-Day Free Trial Today",
+      text: "Get Started with a Free Demo",
       href: "#",
     },
-    subtext: "Cancel anytime, no questions asked",
+    subtext: "No credit card required",
   },
   faqSection: {
     title: "Frequently Asked Questions",
     description:
-      "Answers to common questions about SkyAgent and its features. If you have any other questions, please don't hesitate to contact us.",
+      "Answers to common questions about QTech and our AI solutions. If you have any other questions, please don't hesitate to contact us.",
     faQitems: [
       {
         id: 1,
-        question: "What is an AI Agent?",
+        question: "How does QTech's AI technology work?",
         answer:
-          "An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals. It combines artificial intelligence and machine learning to provide personalized assistance and automation.",
+          "QTech's AI technology combines advanced machine learning algorithms with natural language processing to understand, learn from, and act on your business data. It securely integrates with your existing systems while maintaining complete data privacy and security.",
       },
       {
         id: 2,
-        question: "How does SkyAgent work?",
+        question: "How secure is my company's data with QTech?",
         answer:
-          "SkyAgent works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.",
+          "We implement enterprise-grade security measures including end-to-end encryption, secure isolated environments, and regular security audits. Your data never leaves your control, and we adhere to the highest standards of data protection compliance.",
       },
       {
         id: 3,
-        question: "How secure is my data?",
+        question: "Can QTech integrate with our existing business tools?",
         answer:
-          "We implement enterprise-grade security measures including end-to-end encryption, secure data centers, and regular security audits. Your data is protected according to industry best practices and compliance standards.",
+          "Yes, QTech is designed to seamlessly integrate with popular business tools and platforms. We offer pre-built connectors for major enterprise systems and custom integration services for specialized software.",
       },
       {
         id: 4,
-        question: "Can I integrate my existing tools?",
+        question: "How long does implementation take?",
         answer:
-          "Yes, SkyAgent is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.",
+          "Typical implementation takes 2-4 weeks depending on the complexity of your data and systems. Our team works closely with you to ensure a smooth integration process with minimal disruption to your operations.",
       },
       {
         id: 5,
         question: "Is there a free trial available?",
         answer:
-          "Yes, we offer a 14-day free trial that gives you full access to all features. No credit card is required to start your trial, and you can upgrade or cancel at any time.",
+          "Yes, we offer a 14-day free trial that gives you full access to our platform's features. No credit card is required to start your trial, and you can upgrade or cancel at any time.",
       },
       {
         id: 6,
-        question: "How does SkyAgent save me time?",
+        question: "What kind of support does QTech provide?",
         answer:
-          "SkyAgent automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.",
+          "We offer multiple tiers of support, from standard business hours support to 24/7 premium enterprise support. All customers receive implementation assistance, regular updates, and access to our knowledge base.",
       },
     ],
   },

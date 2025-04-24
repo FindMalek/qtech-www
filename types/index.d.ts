@@ -10,8 +10,8 @@ export type SiteLinks = {
   facebook: string
   instagram: string
   linkedin: string
-  spotify: string
-  resume: string
+  contact: string
+  demo: string
 }
 
 export type SiteImages = {

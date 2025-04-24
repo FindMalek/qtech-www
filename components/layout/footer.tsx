@@ -18,7 +18,9 @@ export function Footer() {
         <div className="mx-0 flex max-w-xs flex-col items-start justify-start gap-y-5">
           <Link href="/" className="flex items-center gap-2">
             <Icons.logo className="size-8" />
-            <p className="text-primary text-xl font-semibold">SkyAgent</p>
+            <p className="text-primary text-xl font-semibold">
+              {siteConfig.name}
+            </p>
           </Link>
           <p className="text-muted-foreground font-medium tracking-tight">
             {siteConfig.hero.description}
@@ -61,7 +63,7 @@ export function Footer() {
         <div className="to-background absolute inset-0 z-10 bg-gradient-to-t from-transparent from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "SkyAgent" : "Streamline your workflow"}
+            text={tablet ? "QTech" : "AI For Your Business"}
             fontSize={tablet ? 70 : 90}
             className="h-full w-full"
             squareSize={2}
