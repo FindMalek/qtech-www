@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { AnimatePresence, motion, useInView } from "motion/react"
+import Image from "next/image"
+import { motion, useInView } from "motion/react"
 
 import { Icons } from "@/components/shared/icons"
 import {
@@ -11,8 +11,8 @@ import {
   ReasoningResponse,
 } from "@/components/ui/reasoning"
 
-export function ReasoningBasic() {
-  const reasoningText = `Based on your calendar patterns and preferences, I recommend scheduling the team meeting for Tuesday at 2pm. This time slot has historically had the highest attendance rate, and it avoids conflicts with other recurring meetings.`
+export function KnowledgeBaseResponse() {
+  const reasoningText = `I found that document for you! The 2022 client onboarding process document is located in Teams > Client Success > Onboarding > 2022. It contains the 7-step workflow we use, including the kickoff meeting template and success metrics. Let me know if you need me to summarize any specific section.`
 
   return (
     <Reasoning>
@@ -26,16 +26,22 @@ export function ReasoningBasic() {
 export function MarketingFirstBentoAnimation() {
   const ref = useRef(null)
   const isInView = useInView(ref)
-  const [shouldAnimate, setShouldAnimate] = useState(false)
+  const [animationStage, setAnimationStage] = useState(0)
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout
     if (isInView) {
       timeoutId = setTimeout(() => {
-        setShouldAnimate(true)
-      }, 1000)
+        setAnimationStage(1)
+        setTimeout(() => {
+          setAnimationStage(2)
+          setTimeout(() => {
+            setAnimationStage(3)
+          }, 3000)
+        }, 2500)
+      }, 1500)
     } else {
-      setShouldAnimate(false)
+      setAnimationStage(0)
     }
 
     return () => {
@@ -50,9 +56,9 @@ export function MarketingFirstBentoAnimation() {
     >
       <div className="from-background pointer-events-none absolute bottom-0 left-0 z-20 h-20 w-full bg-gradient-to-t to-transparent"></div>
       <motion.div
-        className="mx-auto flex w-full max-w-md flex-col gap-2"
+        className="mx-auto flex w-full max-w-md flex-col gap-3"
         animate={{
-          y: shouldAnimate ? -75 : 0,
+          y: animationStage >= 2 ? -80 : 0,
         }}
         transition={{
           type: "spring",
@@ -60,6 +66,7 @@ export function MarketingFirstBentoAnimation() {
           damping: 20,
         }}
       >
+        {/* New Employee Question */}
         <div className="flex items-end justify-end gap-3">
           <motion.div
             className="bg-secondary text-secondary-foreground ml-auto max-w-[280px] rounded-2xl p-4 shadow-[0_0_10px_rgba(0,0,0,0.05)]"
@@ -71,75 +78,88 @@ export function MarketingFirstBentoAnimation() {
             }}
           >
             <p className="text-sm">
-              Hey, I need help scheduling a team meeting that works well for
-              everyone. Any suggestions for finding an optimal time slot?
+              Hi everyone! I&apos;m new here and trying to find the 2022 client
+              onboarding process document. Anyone know where it might be stored?
             </p>
           </motion.div>
           <div className="bg-background border-border flex w-fit flex-shrink-0 items-center rounded-full border">
-            <img
-              src="https://randomuser.me/api/portraits/women/79.jpg"
-              alt="User Avatar"
+            <Image
+              src="https://randomuser.me/api/portraits/men/42.jpg"
+              alt="New Employee Avatar"
               className="size-8 flex-shrink-0 rounded-full"
+              width={32}
+              height={32}
             />
           </div>
         </div>
-        <div className="flex items-start gap-2">
-          <div className="bg-background border-border flex size-10 flex-shrink-0 items-center justify-center rounded-full border shadow-[0_0_10px_rgba(0,0,0,0.05)]">
-            <Icons.logo className="fill-secondary-foreground size-4" />
-          </div>
 
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              {!shouldAnimate ? (
-                <motion.div
-                  key="dots"
-                  className="bg-background border-border absolute left-0 top-0 rounded-2xl border p-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -10 }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeOut",
-                  }}
-                >
-                  <div className="flex gap-1">
-                    {[0, 1, 2].map((index) => (
-                      <motion.div
-                        key={index}
-                        className="bg-primary/50 h-2 w-2 rounded-full"
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{
-                          duration: 0.6,
-                          repeat: Infinity,
-                          delay: index * 0.2,
-                          ease: "easeInOut",
-                        }}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="response"
-                  layout
-                  className="bg-accent border-border absolute left-0 top-0 min-w-[220px] rounded-xl border p-4 shadow-[0_0_10px_rgba(0,0,0,0.05)] md:min-w-[300px]"
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{
-                    duration: 0.3,
-                    ease: "easeOut",
-                  }}
-                >
-                  <ReasoningBasic />
-                </motion.div>
-              )}
-            </AnimatePresence>
+        {/* Time Passed Indicator */}
+        {animationStage >= 1 && (
+          <motion.div
+            className="self-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="bg-muted text-muted-foreground rounded-full px-3 py-1 text-xs">
+              20 minutes later...
+            </div>
+          </motion.div>
+        )}
+
+        {/* Follow-up with @qtech tag */}
+        {animationStage >= 2 && (
+          <div className="flex items-end justify-end gap-3">
+            <motion.div
+              className="bg-secondary text-secondary-foreground ml-auto max-w-[280px] rounded-2xl p-4 shadow-[0_0_10px_rgba(0,0,0,0.05)]"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+                delay: 0.2,
+              }}
+            >
+              <p className="text-sm">
+                Looks like everyone&apos;s busy!{" "}
+                <span className="font-medium text-blue-500">@qtech</span> can
+                you help me find the 2022 client onboarding process document?
+              </p>
+            </motion.div>
+            <div className="bg-background border-border flex w-fit flex-shrink-0 items-center rounded-full border">
+              <Image
+                src="https://randomuser.me/api/portraits/men/42.jpg"
+                alt="New Employee Avatar"
+                className="size-8 flex-shrink-0 rounded-full"
+                width={32}
+                height={32}
+              />
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* AI Response */}
+        {animationStage >= 3 && (
+          <div className="flex items-start gap-2">
+            <div className="bg-background border-border flex size-10 flex-shrink-0 items-center justify-center rounded-full border shadow-[0_0_10px_rgba(0,0,0,0.05)]">
+              <Icons.logo className="fill-secondary-foreground size-4" />
+            </div>
+
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
+              <div className="bg-accent border-border min-w-[220px] rounded-xl border p-4 shadow-[0_0_10px_rgba(0,0,0,0.05)] md:min-w-[320px]">
+                <KnowledgeBaseResponse />
+              </div>
+            </motion.div>
+          </div>
+        )}
       </motion.div>
     </div>
   )

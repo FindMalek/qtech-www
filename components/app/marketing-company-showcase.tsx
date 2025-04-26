@@ -12,7 +12,7 @@ export function MarketingCompanyShowcase() {
       className="relative flex w-full flex-col items-center justify-center gap-10 px-6 py-10 pt-20"
     >
       <p className="text-muted-foreground font-medium">
-        Trusted by fast-growing startups
+        Trusted by Innovative Companies:
       </p>
       <div className="border-border z-20 grid w-full max-w-7xl grid-cols-2 items-center justify-center overflow-hidden border-y md:grid-cols-4">
         {companyShowcase.companyLogos.map((logo) => (
