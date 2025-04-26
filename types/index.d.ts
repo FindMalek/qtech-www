@@ -110,8 +110,6 @@ export type SitePricingItem = {
   description: string
   price: string
   href: string
-  period: BillingCycle
-  yearlyPrice: string
   features: string[]
   buttonText: string
   buttonColor: string

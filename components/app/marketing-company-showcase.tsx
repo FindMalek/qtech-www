@@ -14,7 +14,7 @@ export function MarketingCompanyShowcase() {
       <p className="text-muted-foreground font-medium">
         Trusted by Innovative Companies:
       </p>
-      <div className="border-border z-20 grid w-full max-w-7xl grid-cols-2 items-center justify-center overflow-hidden border-y md:grid-cols-4">
+      <div className="border-border z-20 grid w-full max-w-7xl grid-cols-2 items-center justify-center overflow-hidden border-y md:grid-cols-3">
         {companyShowcase.companyLogos.map((logo) => (
           <Link
             href="#"
