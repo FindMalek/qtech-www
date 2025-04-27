@@ -19,9 +19,9 @@ export async function sendContactEmailIntroduction(
 ) {
   try {
     await resend.emails.send({
-      from: "Malek Gara-Hellal <no-reply@findmalek.com>",
+      from: "QTech Support <no-reply@qtech-company.com>",
       to: [email, siteConfig.author.email],
-      subject: `We received your email, ${name}`,
+      subject: `We received your message, ${name}`,
       react: (
         <MarketingEmailIntroduction
           userName={name}

@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { projectStatus, projectType, workType } from "@/types/enum"
+import { projectStatus, workType } from "@/types/enum"
 
 export const workSchema = z.object({
   id: z.number(),
@@ -54,7 +54,6 @@ export const meetingSchedulerSchema = z.object({
 export type MeetingSchedulerValues = z.infer<typeof meetingSchedulerSchema>
 
 export const pricingEstimatorSchema = z.object({
-  projectType: projectType,
   complexity: z.number().min(0).max(100),
   timeframe: z.number().min(0).max(100),
   selectedFeatures: z.array(z.string()),

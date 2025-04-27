@@ -29,11 +29,12 @@ export const siteConfig: SiteConfig = {
     linkedin: "https://linkedin.com/company/qtech",
     contact: "https://www.qtech.ai/contact",
     demo: "https://www.qtech.ai/demo",
+    meet: "https://calendly.com/nicholas-torabi-qtech-company",
   },
   author: {
-    name: "QTech Team",
-    url: "https://www.qtech.ai",
-    email: "info@qtech.ai",
+    name: "QTech",
+    url: "https://www.qtech-company.com/",
+    email: "nicholas.torabi@qtech-company.com",
     github: "https://github.com/qtech",
   },
   keywords: [

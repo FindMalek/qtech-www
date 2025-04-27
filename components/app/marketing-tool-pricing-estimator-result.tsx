@@ -1,13 +1,8 @@
-import { ProjectType } from "@/types/enum"
-
-import { convertProjectType } from "@/config/converter"
-
 import { Icons } from "@/components/shared/icons"
 import { Card } from "@/components/ui/card"
 
 interface EstimatorResultProps {
   estimate: number
-  projectType: ProjectType
   complexity: number
   timeframe: number
   features: string[]
@@ -15,7 +10,6 @@ interface EstimatorResultProps {
 
 export function MarketingToolPricingEstimatorResult({
   estimate,
-  projectType,
   complexity,
   timeframe,
   features,
@@ -35,12 +29,6 @@ export function MarketingToolPricingEstimatorResult({
       </Card>
 
       <div className="grid grid-cols-2 gap-2 text-sm">
-        <div>
-          <p className="font-medium">Project Type:</p>
-          <p className="text-muted-foreground">
-            {convertProjectType(projectType)}
-          </p>
-        </div>
         <div>
           <p className="font-medium">Complexity:</p>
           <p className="text-muted-foreground">

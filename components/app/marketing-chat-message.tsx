@@ -88,14 +88,14 @@ export function MarketingChatMessage({ message }: ChatMessageProps) {
     >
       <div
         className={cn(
-          "hidden h-8 w-8 shrink-0 select-none items-center justify-center rounded-md border shadow md:block",
-          isUser ? "bg-background" : "bg-primary text-primary-foreground"
+          "hidden shrink-0 select-none items-center justify-center rounded-md border shadow md:block",
+          isUser ? "bg-background" : "bg-secondary text-primary-foreground"
         )}
       >
         {isUser ? (
-          <Icons.user className="size-5" />
+          <Icons.user className="m-2 size-5" />
         ) : (
-          <Icons.logo className="size-8 rounded-md" />
+          <Icons.logo className="size-8 rounded-md p-1" />
         )}
       </div>
       <div

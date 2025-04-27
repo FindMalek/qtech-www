@@ -1,4 +1,4 @@
-import { ProjectType, ToolName } from "@/types/enum"
+import { ToolName } from "@/types/enum"
 
 export const convertToolName = (name: ToolName) => {
   switch (name) {
@@ -10,20 +10,5 @@ export const convertToolName = (name: ToolName) => {
       return "Generate Pricing"
     case "getResume":
       return "View Resume"
-  }
-}
-
-export const convertProjectType = (type: ProjectType) => {
-  switch (type) {
-    case "website":
-      return "Static Website"
-    case "automation":
-      return "Automation Scripts"
-    case "ecommerce":
-      return "E-commerce Store"
-    case "webapp":
-      return "Web Application"
-    case "other":
-      return "Other"
   }
 }

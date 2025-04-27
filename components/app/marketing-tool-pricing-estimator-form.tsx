@@ -1,8 +1,5 @@
 import { type UseFormReturn } from "react-hook-form"
 
-import { PROJECT_TYPE_OPTIONS } from "@/types/enum"
-
-import { convertProjectType } from "@/config/converter"
 import { type PricingEstimatorValues } from "@/config/schemas"
 
 import { Icons } from "@/components/shared/icons"
@@ -36,35 +33,20 @@ export function MarketingToolPricingEstimatorForm({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="projectType"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Project Type</FormLabel>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {PROJECT_TYPE_OPTIONS.map((option) => (
-                  <Badge
-                    key={option}
-                    variant={field.value === option ? "default" : "outline"}
-                    className="cursor-pointer"
-                    onClick={() => field.onChange(option)}
-                  >
-                    {convertProjectType(option)}
-                  </Badge>
-                ))}
-              </div>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="mb-4">
+          <h3 className="font-medium">Enterprise Chatbot Solution</h3>
+          <p className="text-muted-foreground text-sm">
+            Configure your chatbot&apos;s complexity, timeframe, and features
+          </p>
+        </div>
+
         <FormField
           control={form.control}
           name="complexity"
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between">
-                <FormLabel>Project Complexity</FormLabel>
+                <FormLabel>Solution Complexity</FormLabel>
                 <span className="text-muted-foreground text-sm">
                   {field.value < 30
                     ? "Simple"
@@ -86,7 +68,7 @@ export function MarketingToolPricingEstimatorForm({
               <FormMessage />
             </FormItem>
           )}
-        />{" "}
+        />
         <FormField
           control={form.control}
           name="timeframe"

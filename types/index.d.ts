@@ -9,6 +9,7 @@ export type SiteLinks = {
   linkedin: string
   contact: string
   demo: string
+  meet: string
 }
 
 export type SiteImages = {

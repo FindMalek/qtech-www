@@ -27,7 +27,6 @@ export function MarketingToolPricingEstimator({
       {state.estimate !== null ? (
         <MarketingToolPricingEstimatorResult
           estimate={state.estimate}
-          projectType={form.getValues("projectType")}
           complexity={form.getValues("complexity")}
           timeframe={form.getValues("timeframe")}
           features={form.getValues("selectedFeatures")}

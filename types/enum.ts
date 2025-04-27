@@ -20,13 +20,3 @@ export const toolName = z.enum([
   "getResume",
 ])
 export type ToolName = z.infer<typeof toolName>
-
-export const projectType = z.enum([
-  "website",
-  "ecommerce",
-  "webapp",
-  "automation",
-  "other",
-])
-export type ProjectType = z.infer<typeof projectType>
-export const PROJECT_TYPE_OPTIONS = projectType.options

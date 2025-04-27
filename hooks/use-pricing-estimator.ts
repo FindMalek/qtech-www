@@ -27,7 +27,6 @@ export function usePricingEstimator(toolCall: ToolInvocation) {
   const form = useForm<PricingEstimatorValues>({
     resolver: zodResolver(pricingEstimatorSchema),
     defaultValues: {
-      projectType: "website",
       complexity: 50,
       timeframe: 50,
       selectedFeatures: [],
@@ -61,7 +60,7 @@ export function usePricingEstimator(toolCall: ToolInvocation) {
 
     try {
       // Base price by project type
-      const basePrice = PRICING.BASE_PRICES[values.projectType]
+      const basePrice = PRICING.BASE_PRICE
 
       // Calculate feature costs
       const featureCost = values.selectedFeatures.reduce((sum, featureId) => {
@@ -94,7 +93,6 @@ export function usePricingEstimator(toolCall: ToolInvocation) {
       const result = createToolResult(true, {
         estimate: calculatedEstimate,
         currency: PRICING.CURRENCY,
-        projectType: values.projectType,
         complexity: values.complexity,
         timeframe: values.timeframe,
         features: values.selectedFeatures,
