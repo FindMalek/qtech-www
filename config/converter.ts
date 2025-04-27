@@ -1,4 +1,4 @@
-import { ToolName , ProjectType} from "@/types/enum"
+import { ProjectType, ToolName } from "@/types/enum"
 
 export const convertToolName = (name: ToolName) => {
   switch (name) {

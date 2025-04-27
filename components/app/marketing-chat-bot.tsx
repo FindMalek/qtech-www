@@ -44,7 +44,7 @@ export function MarketingChatBot() {
   }
 
   return (
-    <Card className="bg-background/40 flex h-[600px] w-full flex-col overflow-hidden rounded-lg border backdrop-blur-sm">
+    <Card className="bg-background/40 flex h-[600px] w-full flex-col overflow-hidden rounded-none">
       <div className="flex min-h-0 flex-1 flex-col">
         <MarketingChatMessages
           messages={messages}
@@ -54,7 +54,9 @@ export function MarketingChatBot() {
         />
 
         {showSuggestions && messages.length === 1 && (
-          <MarketingSuggestedPrompts onSuggestionClick={handleSuggestionClick} />
+          <MarketingSuggestedPrompts
+            onSuggestionClick={handleSuggestionClick}
+          />
         )}
       </div>
 

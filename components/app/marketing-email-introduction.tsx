@@ -141,4 +141,4 @@ MarketingEmailIntroduction.PreviewProps = {
   conversation: sampleConversation,
 }
 
-export default MarketingEmailIntroduction
+export { MarketingEmailIntroduction }

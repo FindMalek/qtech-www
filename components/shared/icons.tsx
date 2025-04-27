@@ -1,5 +1,16 @@
+import {
+  AlertCircle,
+  ArrowRight,
+  Calculator,
+  Calendar,
+  Check,
+  Loader2,
+  RefreshCw,
+  Send,
+  User,
+} from "lucide-react"
+
 import { cn } from "@/lib/utils"
-import { AlertCircle, Check, RefreshCw, Send, User, Loader2 , ArrowRight, Calendar, Calculator} from "lucide-react"
 
 export const Icons = {
   logo: ({ className }: { className?: string }) => (
@@ -28,7 +39,7 @@ export const Icons = {
           />
         </clipPath>
       </defs>
-      <g clip-path="url(#6146be57e8)">
+      <g clipPath="url(#6146be57e8)">
         <path
           fill="#ffffff"
           d="M 0 0 L 288.5 0 L 288.5 288.5 L 0 288.5 Z M 0 0 "
@@ -36,7 +47,7 @@ export const Icons = {
           fillRule="nonzero"
         />
       </g>
-      <g clip-path="url(#7044e097ff)">
+      <g clipPath="url(#7044e097ff)">
         <path
           fill="#ffffff"
           d="M 0 0 L 288.082031 0 L 288.082031 288.082031 L 0 288.082031 Z M 0 0 "

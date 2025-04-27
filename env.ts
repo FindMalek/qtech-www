@@ -5,6 +5,7 @@ export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production"]),
     GROQ_API_KEY: z.string().min(1).startsWith("gsk_"),
+    RESEND_API_KEY: z.string().min(1).startsWith("re_"),
   },
   client: {
     NEXT_PUBLIC_LOGO_DEV_TOKEN: z.string().min(1).startsWith("pk_"),
@@ -13,5 +14,6 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_LOGO_DEV_TOKEN: process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN,
     GROQ_API_KEY: process.env.GROQ_API_KEY,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
   },
 })

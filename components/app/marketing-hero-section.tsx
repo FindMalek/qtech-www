@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 
-import { MarketingHeroVideoSection } from "@/components/app/marketing-hero-video-section"
+import { MarketingChatBot } from "@/components/app/marketing-chat-bot"
 
 export function MarketingHeroSection() {
   const { hero } = siteConfig
@@ -42,7 +42,9 @@ export function MarketingHeroSection() {
           </div>
         </div>
       </div>
-      <MarketingHeroVideoSection />
+      <div className="relative mt-10 px-6">
+        <MarketingChatBot />
+      </div>
     </section>
   )
 }
