@@ -28,6 +28,7 @@ export function MarketingChatBot() {
     handleFormSubmit,
     handleKeyDown,
     isMessageLimitReached,
+    chatContainerRef,
   } = useContactChat()
 
   useEffect(() => {
@@ -51,6 +52,7 @@ export function MarketingChatBot() {
           isLoading={isLoading}
           isCancelling={isCancelling}
           messagesEndRef={messagesEndRef}
+          chatContainerRef={chatContainerRef}
         />
 
         {showSuggestions && messages.length === 1 && (
