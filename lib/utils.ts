@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import * as Color from "color-bits"
 import { twMerge } from "tailwind-merge"
+import { ChatMessage, ToolData } from "@/types"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -68,3 +69,99 @@ export const hasErrorInput = [
   // ring color
   "ring-red-200 dark:ring-red-700/30",
 ]
+
+export function sanitizeMessages(messages: ChatMessage[]): ChatMessage[] {
+  // First pass: detect context reset messages
+  const hasContextReset = messages.some(
+    (msg) =>
+      msg.role === "system" &&
+      typeof msg.content === "string" &&
+      msg.content.includes("previous conversation thread has been reset")
+  )
+
+  // Filter out system messages used for context resets
+  const filteredMessages = messages.filter(
+    (msg) =>
+      !(
+        msg.role === "system" &&
+        typeof msg.content === "string" &&
+        msg.content.includes("previous conversation thread has been reset")
+      )
+  )
+
+  return filteredMessages.map((message) => {
+    // Skip user messages
+    if (message.role === "user") {
+      return message
+    }
+
+    // Check for context reset messages from assistant
+    const isContextResetMessage =
+      message.role === "assistant" &&
+      typeof message.content === "string" &&
+      (message.content.includes("Let's start fresh") ||
+        message.content.includes("I understand you want to change the topic"))
+
+    // Keep context reset messages as they are important signals
+    if (isContextResetMessage) {
+      return message
+    }
+
+    // Function to check if a message contains a pending tool call
+    const hasPendingToolCall = (msg: ChatMessage): boolean => {
+      // Check toolInvocations property
+      if (msg.toolInvocations && Array.isArray(msg.toolInvocations)) {
+        if (
+          msg.toolInvocations.some(
+            (tool: ToolData) => tool.state === "call" && !tool.result
+          )
+        ) {
+          return true
+        }
+      }
+
+      // Check toolCalls property
+      if (msg.toolCalls && Array.isArray(msg.toolCalls)) {
+        if (
+          msg.toolCalls.some(
+            (tool: ToolData) => tool.state === "call" && !tool.result
+          )
+        ) {
+          return true
+        }
+      }
+
+      // Check parts array for tool invocations
+      if (msg.parts && Array.isArray(msg.parts)) {
+        for (const part of msg.parts) {
+          if (
+            part.type === "tool-invocation" &&
+            part.toolInvocation?.state === "call" &&
+            !part.toolInvocation?.result
+          ) {
+            return true
+          }
+        }
+      }
+
+      return false
+    }
+
+    // If message has a pending tool call, sanitize it
+    if (hasPendingToolCall(message)) {
+      console.log("Found pending tool call, sanitizing message")
+
+      // Create a clean version of the message with better context reset hints for the model
+      return {
+        role: message.role,
+        content: hasContextReset
+          ? "Let's start with a completely new topic. How can I help you now?"
+          : "I'm ready to help you with something else.",
+        id: message.id,
+      }
+    }
+
+    // Message is clean, return as is
+    return message
+  })
+}

@@ -1,7 +1,4 @@
-import { Popover } from "@headlessui/react"
-
-import { billingCycle } from "./enum"
-
+export * from "./chatbot"
 export * from "./enum"
 
 export type SiteLinks = {
@@ -172,3 +169,16 @@ export type SiteConfig = {
   ctaSection: SiteCTASection
   faqSection: SiteFAQSection
 }
+
+export interface ConversationHistory {
+  role: string
+  message: string
+}
+
+export interface ContactEmailIntroductionProps {
+  userName: string
+  userEmail: string
+  contactPurpose: string
+  conversation: ConversationHistory[]
+}
+

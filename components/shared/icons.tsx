@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { AlertCircle, Check, RefreshCw, Send, User, Loader2 , ArrowRight, Calendar, Calculator} from "lucide-react"
 
 export const Icons = {
   logo: ({ className }: { className?: string }) => (
@@ -2514,4 +2515,13 @@ export const Icons = {
       </defs>
     </svg>
   ),
+  alertCircle: AlertCircle,
+  check: Check,
+  refresh: RefreshCw,
+  send: Send,
+  user: User,
+  spinner: Loader2,
+  arrowRight: ArrowRight,
+  calendar: Calendar,
+  calculator: Calculator,
 }
