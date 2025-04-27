@@ -10,12 +10,12 @@ export function MarketingSuggestedPrompts({
   onSuggestionClick,
 }: SuggestedPromptsProps) {
   const suggestions = [
-    "I'd like to contact you",
-    "Schedule a meeting",
-    "Get a price estimate for my project",
-    "View your resume/CV",
-    "What can you help me with?",
-    "Let's chat",
+    "I need a custom chatbot solution",
+    "Tell me about your software development services",
+    "How much does a chatbot implementation cost?",
+    "Schedule a consultation",
+    "What industries do you serve?",
+    "How do you ensure data privacy?"
   ]
 
   return (

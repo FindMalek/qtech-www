@@ -1,4 +1,5 @@
 - [ ] Update DNS in `sitemap.ts`
 - [ ] Update DNS in `robot.ts`
-- [ ] Update content in `config/site.ts` to match `QTech` instead of `findmalek`
+- [x] Update content in `config/site.ts` to match `QTech` instead of `findmalek`
 - [ ] Create Opengraph for the website, using `imgsrc`
+- [ ] Create an action for buttons when it's clicked it will launch a chatbot message for a toolcall

@@ -25,16 +25,6 @@ export function Footer() {
           <p className="text-muted-foreground font-medium tracking-tight">
             {siteConfig.hero.description}
           </p>
-          <div className="flex items-center gap-2 dark:hidden">
-            <Icons.soc2 className="size-12" />
-            <Icons.hipaa className="size-12" />
-            <Icons.gdpr className="size-12" />
-          </div>
-          <div className="hidden items-center gap-2 dark:flex">
-            <Icons.soc2Dark className="size-12" />
-            <Icons.hipaaDark className="size-12" />
-            <Icons.gdprDark className="size-12" />
-          </div>
         </div>
         <div className="pt-5 md:w-1/2">
           <div className="flex flex-col items-start justify-start gap-y-5 md:flex-row md:items-center md:justify-between lg:pl-10">
