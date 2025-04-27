@@ -20,6 +20,7 @@ export function useContactChat() {
   const [showSuggestions, setShowSuggestions] = useState(true)
   const [isCancelling, setIsCancelling] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const chatContainerRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
   // Check if message limit has been reached
@@ -78,13 +79,18 @@ export function useContactChat() {
 
   // Monitor for scrolling to bottom on new messages
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    // Scroll the chat container instead of using scrollIntoView
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight
+    }
   }
 
   // Scroll to bottom whenever messages change
-  if (typeof window !== "undefined" && messages.length > 0) {
-    setTimeout(scrollToBottom, 100)
-  }
+  useEffect(() => {
+    if (messages.length > 0) {
+      setTimeout(scrollToBottom, 100)
+    }
+  }, [messages])
 
   // Handle keydown events
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -125,6 +131,7 @@ export function useContactChat() {
     showSuggestions,
     handleSuggestionClick,
     messagesEndRef,
+    chatContainerRef,
     input,
     handleInputChange,
     inputRef,

@@ -9,6 +9,7 @@ interface MarketingChatMessagesProps {
   isLoading: boolean
   isCancelling: boolean
   messagesEndRef: RefObject<HTMLDivElement | null>
+  chatContainerRef: RefObject<HTMLDivElement | null>
 }
 
 export function MarketingChatMessages({
@@ -16,9 +17,13 @@ export function MarketingChatMessages({
   isLoading,
   isCancelling,
   messagesEndRef,
+  chatContainerRef,
 }: MarketingChatMessagesProps) {
   return (
-    <div className="min-h-0 flex-1 overflow-y-auto p-4">
+    <div 
+      className="min-h-0 flex-1 overflow-y-auto p-4" 
+      ref={chatContainerRef}
+    >
       {messages.map((message) => (
         <MarketingChatMessage key={message.id} message={message} />
       ))}
