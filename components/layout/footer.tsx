@@ -26,7 +26,7 @@ export function Footer() {
             {siteConfig.hero.description}
           </p>
         </div>
-        <div className="pt-5 md:w-1/2">
+        <div className="pt-5 md:w-1/3">
           <div className="flex flex-col items-start justify-start gap-y-5 md:flex-row md:items-center md:justify-between lg:pl-10">
             {siteConfig.footerLinks.map((column, columnIndex) => (
               <ul key={columnIndex} className="flex flex-col gap-y-2">

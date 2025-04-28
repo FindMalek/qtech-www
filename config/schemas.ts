@@ -8,6 +8,14 @@ export const legalSchema = z.object({
 
 export type LegalRo = z.infer<typeof legalSchema>
 
+export const companySchema = z.object({
+  slug: z.string(),
+  title: z.string().min(1),
+  overview: z.string().min(1),
+})
+
+export type CompanyRo = z.infer<typeof companySchema>
+
 export const emailFormSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Invalid email address" }),

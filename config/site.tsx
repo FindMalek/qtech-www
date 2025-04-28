@@ -65,10 +65,10 @@ export const siteConfig: SiteConfig = {
   ],
   nav: {
     links: [
-      { id: 1, name: "Home", href: "#hero" },
-      { id: 2, name: "How it Works", href: "#bento" },
-      { id: 3, name: "Features", href: "#features" },
-      { id: 4, name: "Pricing", href: "#pricing" },
+      { id: 1, name: "Home", href: "/#hero" },
+      { id: 2, name: "How it Works", href: "/#bento" },
+      { id: 3, name: "Features", href: "/#features" },
+      { id: 4, name: "Pricing", href: "/#pricing" },
     ],
   },
   hero: {
@@ -855,27 +855,17 @@ export const siteConfig: SiteConfig = {
     {
       title: "Company",
       links: [
-        { id: 1, name: "About", href: "#" },
-        { id: 2, name: "Contact", href: "#" },
-        { id: 3, name: "Blog", href: "#" },
-        { id: 4, name: "Story", href: "#" },
-      ],
-    },
-    {
-      title: "Products",
-      links: [
-        { id: 5, name: "Company", href: "#" },
-        { id: 6, name: "Product", href: "#" },
-        { id: 7, name: "Press", href: "#" },
-        { id: 8, name: "More", href: "#" },
+        { id: 1, name: "About", href: "/company/about" },
+        { id: 2, name: "Story", href: "/company/story" },
+        { id: 3, name: "Team", href: "/company/team" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { id: 9, name: "Imprint", href: "/legal/imprint" },
-        { id: 10, name: "Data Privacy", href: "/legal/data-privacy" },
-        { id: 11, name: "Terms of Service", href: "/legal/terms-of-service" },
+        { id: 4, name: "Imprint", href: "/legal/imprint" },
+        { id: 5, name: "Data Privacy", href: "/legal/data-privacy" },
+        { id: 6, name: "Terms of Service", href: "/legal/terms-of-service" },
       ],
     },
   ],
