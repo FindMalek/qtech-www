@@ -19,7 +19,7 @@ export async function sendContactEmailIntroduction(
 ) {
   try {
     await resend.emails.send({
-      from: "QTech Support <no-reply@qtech-company.com>",
+      from: "QTech Support <info@qtech-company.com>",
       to: [email, siteConfig.author.email],
       subject: `We received your message, ${name}`,
       react: (

@@ -93,11 +93,11 @@ export const siteConfig: SiteConfig = {
     cta: {
       primary: {
         text: "Get a Demo",
-        href: "#",
+        href: "https://calendly.com/nicholas-torabi-qtech-company",
       },
       secondary: {
         text: "Learn More",
-        href: "#",
+        href: "/company/about",
       },
     },
   },
@@ -123,6 +123,58 @@ export const siteConfig: SiteConfig = {
           <Image
             src="/companies/any-rm.png"
             alt="AnyRM"
+            width={100}
+            height={100}
+            className="grayscale"
+          />
+        ),
+      },
+      {
+        id: 3,
+        name: "Inlisol",
+        logo: (
+          <Image
+            src="/companies/inlisol.png"
+            alt="Inlisol"
+            width={100}
+            height={100}
+            className="fill-red-500  brightness-0 dark:invert"
+          />
+        ),
+      },
+      {
+        id: 4,
+        name: "Caucasus",
+        logo: (
+          <Image
+            src="/companies/caucasus.jpeg"
+            alt="Caucasus"
+            width={100}
+            height={100}
+            className="grayscale"
+          />
+        ),
+      },
+      {
+        id: 5,
+        name: "Atleis",
+        logo: (
+          <Image
+            src="/companies/atleis.png"
+            alt="Atleis"
+            width={100}
+            height={100}
+            className="grayscale"
+          />
+        ),
+      },
+      {
+        id: 6,
+        name: "OnAir Jets",
+        logo: (
+          <Image
+            src="/companies/on-air-jets.png"
+            alt="OnAir Jets"
             width={100}
             height={100}
             className="grayscale"
@@ -177,9 +229,9 @@ export const siteConfig: SiteConfig = {
     quote:
       "QTech has completely changed how we work. Our team gets instant answers, proposals are generated automatically, and it all connects with our tools. It's like having an extra team member who's always up to speed.",
     author: {
-      name: "Michael Chen",
-      role: "CTO, Enterprise Solutions Inc.",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "Amin T.",
+      role: "Co-Founder at Inlisol",
+      image: "/companies/inlisol.png",
     },
   },
   featureSection: {
@@ -574,279 +626,169 @@ export const siteConfig: SiteConfig = {
   testimonials: [
     {
       id: "1",
-      name: "David Chen",
-      role: "CTO at EnterpriseOne",
-      img: "https://randomuser.me/api/portraits/men/22.jpg",
+      name: "Umberto T.",
+      role: "Co-Founder at Atleis",
+      img: "/companies/atleis.png",
       description: (
         <p>
-          QTech's AI knowledge base has revolutionized our internal operations.
+          We needed a solution that could understand all of our property
+          listings, contracts, and client interactions, as well as make it
+          easily accessible to our sales agents. QTech delivered an AI agent
+          that
           <Highlight>
-            Our team now finds answers 5x faster than before.
+            not only answers questions about listings and terms but also
+            prepares proposal emails and assists in onboarding new agents.
           </Highlight>{" "}
-          A game-changer for enterprise efficiency.
+          It feels like it understands our business from the inside, and it
+          safely handles our data, which is critical in real estate.
         </p>
       ),
     },
     {
       id: "2",
-      name: "Sarah Miller",
-      role: "VP of Operations at Global Solutions",
-      img: "https://randomuser.me/api/portraits/women/23.jpg",
+      name: "Ramon L.",
+      role: "CEO at OnAir Jets",
+      img: "/companies/on-air-jets.png",
       description: (
         <p>
-          Implementing QTech's workflow automation has drastically improved our
-          process efficiency.
-          <Highlight>We've reduced processing time by 65%!</Highlight> Would
-          highly recommend for any enterprise looking to scale.
+          Working with QTech was a game-changer. They built us a private AI
+          system that could process past bookings, client preferences, and
+          aircraft availability.
+          <Highlight>
+            Then it could automatically generate tailored flight proposals for
+            our clients.
+          </Highlight>{" "}
+          It felt like adding a 24/7 operations assistant that never makes
+          mistakes. Everything was integrated into our CRM and email tools, and
+          the entire system is completely secure.
         </p>
       ),
     },
     {
       id: "3",
-      name: "James Wilson",
-      role: "CEO at TechForward",
-      img: "https://randomuser.me/api/portraits/men/45.jpg",
+      name: "Amin T.",
+      role: "Co-Founder at Inlisol",
+      img: "/companies/inlisol.png",
       description: (
         <p>
-          As a fast-growing company, we need reliable AI solutions. QTech
-          delivers exactly what we need.
+          QTech has completely changed how we work. Our team gets instant
+          answers, proposals are generated automatically, and it all connects
+          with our tools.
           <Highlight>
-            The security features are unmatched in the industry.
-          </Highlight>{" "}
-          Essential tool for any modern business.
+            It's like having an extra team member who's always up to speed.
+          </Highlight>
         </p>
       ),
     },
     {
       id: "4",
-      name: "Emily Zhang",
-      role: "Director of IT at MultiNational Corp",
-      img: "https://randomuser.me/api/portraits/women/33.jpg",
+      name: "Umberto T.",
+      role: "Co-Founder at Atleis",
+      img: "/companies/atleis.png",
       description: (
         <p>
-          QTech's enterprise integrations made connecting to our existing
-          systems seamless.
-          <Highlight>Implementation was faster than we expected.</Highlight> A
-          must-have for enterprise IT infrastructure.
+          We needed a solution that could understand all of our property
+          listings, contracts, and client interactions, as well as make it
+          easily accessible to our sales agents. QTech delivered an AI agent
+          that
+          <Highlight>
+            not only answers questions about listings and terms but also
+            prepares proposal emails and assists in onboarding new agents.
+          </Highlight>{" "}
+          It feels like it understands our business from the inside, and it
+          safely handles our data, which is critical in real estate.
         </p>
       ),
     },
     {
       id: "5",
-      name: "Michael Rodriguez",
-      role: "Head of Analytics at FinTech Innovations",
-      img: "https://randomuser.me/api/portraits/men/4.jpg",
+      name: "Ramon L.",
+      role: "CEO at OnAir Jets",
+      img: "/companies/on-air-jets.png",
       description: (
         <p>
-          Leveraging QTech's AI for our financial data analysis has transformed
-          our decision-making process.
+          Working with QTech was a game-changer. They built us a private AI
+          system that could process past bookings, client preferences, and
+          aircraft availability.
           <Highlight>
-            Our insights are now backed by real-time AI-powered analytics.
+            Then it could automatically generate tailored flight proposals for
+            our clients.
           </Highlight>{" "}
-          Transformative for data-driven companies.
+          It felt like adding a 24/7 operations assistant that never makes
+          mistakes. Everything was integrated into our CRM and email tools, and
+          the entire system is completely secure.
         </p>
       ),
     },
     {
       id: "6",
-      name: "Linda Kumar",
-      role: "VP of Supply Chain at LogiTech Solutions",
-      img: "https://randomuser.me/api/portraits/women/5.jpg",
+      name: "Amin T.",
+      role: "Co-Founder at Inlisol",
+      img: "/companies/inlisol.png",
       description: (
         <p>
-          QTech's supply chain optimization tools have significantly reduced our
-          operational costs.
+          QTech has completely changed how we work. Our team gets instant
+          answers, proposals are generated automatically, and it all connects
+          with our tools.
           <Highlight>
-            Our logistics efficiency has improved by 40% since implementation.
-          </Highlight>{" "}
+            It's like having an extra team member who's always up to speed.
+          </Highlight>
         </p>
       ),
     },
     {
       id: "7",
-      name: "Robert Park",
-      role: "Sustainability Director at GreenTech",
-      img: "https://randomuser.me/api/portraits/men/65.jpg",
+      name: "Umberto T.",
+      role: "Co-Founder at Atleis",
+      img: "/companies/atleis.png",
       description: (
         <p>
-          By integrating QTech's analytics platform, we've achieved our
-          sustainability goals ahead of schedule.
+          We needed a solution that could understand all of our property
+          listings, contracts, and client interactions, as well as make it
+          easily accessible to our sales agents. QTech delivered an AI agent
+          that
           <Highlight>
-            Their AI helped us identify efficiency opportunities we had missed.
+            not only answers questions about listings and terms but also
+            prepares proposal emails and assists in onboarding new agents.
           </Highlight>{" "}
-          Pioneering change in our industry.
+          It feels like it understands our business from the inside, and it
+          safely handles our data, which is critical in real estate.
         </p>
       ),
     },
     {
       id: "8",
-      name: "Priya Sharma",
-      role: "CMO at Retail Innovations",
-      img: "https://randomuser.me/api/portraits/women/56.jpg",
+      name: "Ramon L.",
+      role: "CEO at OnAir Jets",
+      img: "/companies/on-air-jets.png",
       description: (
         <p>
-          QTech's customer analytics has transformed our marketing strategy.
+          Working with QTech was a game-changer. They built us a private AI
+          system that could process past bookings, client preferences, and
+          aircraft availability.
           <Highlight>
-            Our campaigns are now data-driven with 35% higher engagement rates.
+            Then it could automatically generate tailored flight proposals for
+            our clients.
           </Highlight>{" "}
-          Revolutionary for modern marketing teams.
+          It felt like adding a 24/7 operations assistant that never makes
+          mistakes. Everything was integrated into our CRM and email tools, and
+          the entire system is completely secure.
         </p>
       ),
     },
     {
       id: "9",
-      name: "Tom Chen",
-      role: "Director of IT at HealthTech Solutions",
-      img: "https://randomuser.me/api/portraits/men/18.jpg",
+      name: "Amin T.",
+      role: "Co-Founder at Inlisol",
+      img: "/companies/inlisol.png",
       description: (
         <p>
-          Implementing #MediCareAI in our patient care systems has improved
-          patient outcomes significantly.
+          QTech has completely changed how we work. Our team gets instant
+          answers, proposals are generated automatically, and it all connects
+          with our tools.
           <Highlight>
-            Technology and healthcare working hand in hand for better health.
-          </Highlight>{" "}
-          A milestone in medical technology.
-        </p>
-      ),
-    },
-    {
-      id: "10",
-      name: "Sofia Patel",
-      role: "CEO at EduTech Innovations",
-      img: "https://randomuser.me/api/portraits/women/73.jpg",
-      description: (
-        <p>
-          #LearnSmart&apos;s AI-driven personalized learning plans have doubled
-          student performance metrics.
-          <Highlight>
-            Education tailored to every learner&apos;s needs.
-          </Highlight>{" "}
-          Transforming the educational landscape.
-        </p>
-      ),
-    },
-    {
-      id: "11",
-      name: "Jake Morrison",
-      role: "CTO at SecureNet Tech",
-      img: "https://randomuser.me/api/portraits/men/25.jpg",
-      description: (
-        <p>
-          With #CyberShield&apos;s AI-powered security systems, our data
-          protection levels are unmatched.
-          <Highlight>
-            Ensuring safety and trust in digital spaces.
-          </Highlight>{" "}
-          Redefining cybersecurity standards.
-        </p>
-      ),
-    },
-    {
-      id: "12",
-      name: "Nadia Ali",
-      role: "Product Manager at Creative Solutions",
-      img: "https://randomuser.me/api/portraits/women/78.jpg",
-      description: (
-        <p>
-          #DesignPro&apos;s AI has streamlined our creative process, enhancing
-          productivity and innovation.
-          <Highlight>Bringing creativity and technology together.</Highlight> A
-          game-changer for creative industries.
-        </p>
-      ),
-    },
-    {
-      id: "13",
-      name: "Omar Farooq",
-      role: "Founder at Startup Hub",
-      img: "https://randomuser.me/api/portraits/men/54.jpg",
-      description: (
-        <p>
-          #VentureAI&apos;s insights into startup ecosystems have been
-          invaluable for our growth and funding strategies.
-          <Highlight>
-            Empowering startups with data-driven decisions.
-          </Highlight>{" "}
-          A catalyst for startup success.
-        </p>
-      ),
-    },
-    {
-      id: "9",
-      name: "Thomas Wilson",
-      role: "Director of Innovation at HealthTech Solutions",
-      img: "https://randomuser.me/api/portraits/men/18.jpg",
-      description: (
-        <p>
-          Implementing QTech's secure AI in our healthcare systems has improved
-          patient care metrics significantly.
-          <Highlight>
-            All while maintaining strict HIPAA compliance and data security.
-          </Highlight>{" "}
-          A milestone in healthcare technology.
-        </p>
-      ),
-    },
-    {
-      id: "10",
-      name: "Sophia Martinez",
-      role: "CEO at EduTech Innovations",
-      img: "https://randomuser.me/api/portraits/women/73.jpg",
-      description: (
-        <p>
-          QTech's learning solution has transformed our educational platform.
-          <Highlight>
-            Student engagement metrics have increased by 75% since
-            implementation.
-          </Highlight>{" "}
-          Transforming the educational landscape.
-        </p>
-      ),
-    },
-    {
-      id: "11",
-      name: "Jack Thompson",
-      role: "CISO at SecureNet",
-      img: "https://randomuser.me/api/portraits/men/25.jpg",
-      description: (
-        <p>
-          QTech's security framework meets our stringent enterprise
-          requirements.
-          <Highlight>
-            We can confidently leverage AI while maintaining strict data
-            protection.
-          </Highlight>{" "}
-          Setting a new standard in secure AI.
-        </p>
-      ),
-    },
-    {
-      id: "12",
-      name: "Nadia Khan",
-      role: "Director of Digital Transformation",
-      img: "https://randomuser.me/api/portraits/women/78.jpg",
-      description: (
-        <p>
-          QTech has been central to our digital transformation journey.
-          <Highlight>
-            Their integration capabilities are truly enterprise-class.
-          </Highlight>{" "}
-          A perfect partner for complex organizations.
-        </p>
-      ),
-    },
-    {
-      id: "13",
-      name: "Omar Hassan",
-      role: "Founder at Tech Innovators",
-      img: "https://randomuser.me/api/portraits/men/54.jpg",
-      description: (
-        <p>
-          QTech's AI platform has been invaluable for our growth strategy.
-          <Highlight>
-            Their private knowledge base technology is unmatched in the market.
-          </Highlight>{" "}
-          A catalyst for business success.
+            It's like having an extra team member who's always up to speed.
+          </Highlight>
         </p>
       ),
     },

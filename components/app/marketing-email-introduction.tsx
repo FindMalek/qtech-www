@@ -19,12 +19,12 @@ import { ContactEmailIntroductionProps } from "@/types"
 
 // Sample conversation history
 const sampleConversation = [
-  { role: "bot", message: "Hello! How can I help you today?" },
+  { role: "bot", message: "Hello! How can we help you today?" },
   { role: "user", message: "I have a question about your services." },
   {
     role: "bot",
     message:
-      "Of course! I'd be happy to help with any questions about our services. What would you like to know?",
+      "Of course! We'd be happy to help with any questions about our services. What would you like to know?",
   },
   { role: "user", message: "Do you offer custom solutions?" },
   {
@@ -44,7 +44,7 @@ const MarketingEmailIntroduction = ({
     <Html>
       <Head />
       <Preview>
-        Thanks for reaching out to me about your {contactPurpose.toLowerCase()}!
+        Thanks for reaching out to us about your {contactPurpose.toLowerCase()}!
       </Preview>
       <Tailwind>
         <Body className="bg-gray-50 py-[40px] font-sans">
@@ -52,10 +52,10 @@ const MarketingEmailIntroduction = ({
             {/* Header */}
             <Section className="mb-[32px] text-center">
               <Heading className="m-0 text-[28px] font-bold text-cyan-600">
-                Thank You for Contacting Me
+                Thank You for Contacting Us
               </Heading>
               <Text className="mb-0 mt-[8px] text-[16px] text-gray-500">
-                I&apos;ve received your {contactPurpose.toLowerCase()}
+                We&apos;ve received your {contactPurpose.toLowerCase()}
               </Text>
             </Section>
 
@@ -71,7 +71,7 @@ const MarketingEmailIntroduction = ({
                 <span className="font-semibold text-cyan-600">
                   {contactPurpose}
                 </span>
-                . I&apos;ve received your message and will get back to you at{" "}
+                . We&apos;ve received your message and will get back to you at{" "}
                 <Link
                   href={`mailto:${userEmail}`}
                   className="font-medium text-cyan-600"
@@ -82,7 +82,7 @@ const MarketingEmailIntroduction = ({
               </Text>
 
               <Text className="mb-[16px] text-[16px] leading-[26px] text-gray-700">
-                Here&apos;s a record of your conversation with me:
+                Here&apos;s a record of your conversation with us:
               </Text>
             </Section>
 
@@ -93,7 +93,7 @@ const MarketingEmailIntroduction = ({
                     <>
                       <Column width="24px" className="pt-[4px] align-top">
                         <Section className="h-[24px] w-[24px] rounded-full bg-cyan-500 text-center text-[12px] font-bold leading-[24px] text-white">
-                          B
+                          Q
                         </Section>
                       </Column>
                       <Column className="px-[8px]">
@@ -123,7 +123,7 @@ const MarketingEmailIntroduction = ({
             </Section>
 
             <Text className="text-[16px] leading-[26px] text-gray-700">
-              I&apos;m reviewing your inquiry and will provide a personalized
+              We&apos;re reviewing your inquiry and will provide a personalized
               response shortly. If you need immediate assistance, please
               don&apos;t hesitate to reach out directly.
             </Text>
