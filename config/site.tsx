@@ -871,12 +871,11 @@ export const siteConfig: SiteConfig = {
       ],
     },
     {
-      title: "Resources",
+      title: "Legal",
       links: [
-        { id: 9, name: "Press", href: "#" },
-        { id: 10, name: "Careers", href: "#" },
-        { id: 11, name: "Newsletters", href: "#" },
-        { id: 12, name: "More", href: "#" },
+        { id: 9, name: "Imprint", href: "/legal/imprint" },
+        { id: 10, name: "Data Privacy", href: "/legal/data-privacy" },
+        { id: 11, name: "Terms of Service", href: "/legal/terms-of-service" },
       ],
     },
   ],

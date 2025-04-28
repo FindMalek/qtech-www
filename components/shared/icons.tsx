@@ -4,6 +4,7 @@ import {
   Calculator,
   Calendar,
   Check,
+  ChevronLeft,
   Loader2,
   RefreshCw,
   Send,
@@ -13,6 +14,7 @@ import {
 import { cn } from "@/lib/utils"
 
 export const Icons = {
+  chevronLeft: ChevronLeft,
   logo: ({ className }: { className?: string }) => (
     <svg
       className={cn("size-4 fill-[var(--secondary)]", className)}
