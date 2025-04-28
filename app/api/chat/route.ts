@@ -64,9 +64,8 @@ export async function POST(req: Request) {
       - Cross-functional Teams: Each project is assigned developers, designers, QA specialists, and project managers
       
       PRICING PLANS:
-      - Basic: $499/mo - Includes standard chatbot with basic question answering, web integration, and up to 500 knowledge base documents
-      - Pro: $999/mo - Includes advanced chatbot with enhanced NLP, multi-channel support, analytics dashboard, and up to 2,500 knowledge base documents
-      - Enterprise: $2,499/mo - Includes all Pro features plus custom integrations, dedicated support, advanced security, and unlimited knowledge base documents
+      - Basic: 1499€ - Includes access to a dedicated private GPT, basic tool connections (Gmail, Notion, etc.), limited document processing, and standard support
+      - Completely Customable: Custom pricing - Includes custom-built privatized AI agents, hosting in your environment or EU cloud, full tool integration (CRM, ERP, internal systems), millions of documents processed with high accuracy, onboarding/training/execution capabilities, enterprise-grade security (GDPR-compliant), and premium support & onboarding
       
       YOUR ROLE:
       Help visitors connect with QTech for their technology needs. You can collect contact information, direct them to scheduling for consultations, provide service pricing estimates, share company information, and explain our pricing plans.
@@ -130,7 +129,7 @@ export async function POST(req: Request) {
             planName: z
               .string()
               .describe(
-                "The name of the pricing plan (Basic, Pro, or Enterprise)"
+                "The name of the pricing plan (Basic or Completely Customable)"
               ),
             includeContactOptions: z
               .boolean()
