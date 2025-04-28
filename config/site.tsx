@@ -535,7 +535,7 @@ export const siteConfig: SiteConfig = {
       "Choose the plan that fits your organization's needs. All plans include a free trial period.",
     pricingItems: [
       {
-        name: "Basic Secure",
+        name: "Basic",
         href: "#",
         price: "1499€",
         features: [
@@ -546,7 +546,7 @@ export const siteConfig: SiteConfig = {
         ],
         description:
           "Ideal for startups and small teams ready to build secure AI tools",
-        buttonText: "Speak with us",
+        buttonText: "Get started",
         buttonColor: "bg-muted-foreground/20 text-secondary-foreground",
         isPopular: true,
       },

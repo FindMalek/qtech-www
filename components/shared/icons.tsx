@@ -6,15 +6,19 @@ import {
   Check,
   ChevronLeft,
   Loader2,
+  Mail,
   RefreshCw,
   Send,
   User,
+  X,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
 export const Icons = {
   chevronLeft: ChevronLeft,
+  mail: Mail,
+  close: X,
   logo: ({ className }: { className?: string }) => (
     <svg
       className={cn("size-4 fill-[var(--secondary)]", className)}

@@ -121,10 +121,18 @@ export function useChatWithTools() {
     }
   }
 
+  /**
+   * Sets the input value programmatically
+   */
+  const setInput = (value: string) => {
+    chatState.setInput(value)
+  }
+
   return {
     ...chatState,
     addToolResult: safeAddToolResult,
     cancelToolCall,
+    setInput,
   }
 }
 

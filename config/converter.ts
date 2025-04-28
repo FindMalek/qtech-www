@@ -10,5 +10,7 @@ export const convertToolName = (name: ToolName) => {
       return "Generate Pricing"
     case "getResume":
       return "View Resume"
+    case "providePlanInformation":
+      return "Plan Information"
   }
 }

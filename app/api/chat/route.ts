@@ -63,8 +63,13 @@ export async function POST(req: Request) {
       - Technology Stack: We use modern frameworks and languages including React, Node.js, Python, and cloud-native technologies
       - Cross-functional Teams: Each project is assigned developers, designers, QA specialists, and project managers
       
+      PRICING PLANS:
+      - Basic: $499/mo - Includes standard chatbot with basic question answering, web integration, and up to 500 knowledge base documents
+      - Pro: $999/mo - Includes advanced chatbot with enhanced NLP, multi-channel support, analytics dashboard, and up to 2,500 knowledge base documents
+      - Enterprise: $2,499/mo - Includes all Pro features plus custom integrations, dedicated support, advanced security, and unlimited knowledge base documents
+      
       YOUR ROLE:
-      Help visitors connect with QTech for their technology needs. You can collect contact information, direct them to scheduling for consultations, provide service pricing estimates, and share company information.
+      Help visitors connect with QTech for their technology needs. You can collect contact information, direct them to scheduling for consultations, provide service pricing estimates, share company information, and explain our pricing plans.
       
       IMPORTANT GUIDELINES:
       1. Respond as a QTech representative in a friendly, professional tone
@@ -116,6 +121,22 @@ export async function POST(req: Request) {
               .string()
               .optional()
               .describe("The purpose for wanting company information"),
+          }),
+        },
+        providePlanInformation: {
+          description:
+            "Provide detailed information about a specific pricing plan",
+          parameters: z.object({
+            planName: z
+              .string()
+              .describe(
+                "The name of the pricing plan (Basic, Pro, or Enterprise)"
+              ),
+            includeContactOptions: z
+              .boolean()
+              .describe(
+                "Whether to include information about contacting options"
+              ),
           }),
         },
       },

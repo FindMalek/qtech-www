@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 
 import { MarketingToolEmailForm } from "@/components/app/marketing-tool-email-form"
 import { MarketingToolMeetingScheduler } from "@/components/app/marketing-tool-meeting-scheduler"
+import { MarketingToolPlanInformation } from "@/components/app/marketing-tool-plan-information"
 import { MarketingToolPricingEstimator } from "@/components/app/marketing-tool-pricing-estimator"
 import { Icons } from "@/components/shared/icons"
 
@@ -61,6 +62,8 @@ export function MarketingChatMessage({ message }: ChatMessageProps) {
           return <MarketingToolMeetingScheduler />
         case "generatePricing":
           return <MarketingToolPricingEstimator toolCall={toolCall} />
+        case "providePlanInformation":
+          return <MarketingToolPlanInformation toolCall={toolCall} />
         default:
           return (
             <div className="text-muted-foreground text-sm">

@@ -4,10 +4,13 @@ import { motion } from "motion/react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { usePricingSelection } from "@/hooks/use-pricing-selection"
 
 import { SectionHeader } from "@/components/shared/section-header"
 
 export function MarketingPricingSection() {
+  const { selectPricingTier } = usePricingSelection()
+
   // Update price animation
   const PriceDisplay = ({
     tier,
@@ -73,6 +76,7 @@ export function MarketingPricingSection() {
 
               <div className="flex flex-col gap-2 p-4">
                 <button
+                  onClick={() => selectPricingTier(tier.name)}
                   className={`flex h-10 w-full cursor-pointer items-center justify-center rounded-full px-4 text-sm font-normal tracking-wide transition-all ease-out active:scale-95 ${
                     tier.isPopular
                       ? `${tier.buttonColor} shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]`
