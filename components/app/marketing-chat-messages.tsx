@@ -20,10 +20,7 @@ export function MarketingChatMessages({
   chatContainerRef,
 }: MarketingChatMessagesProps) {
   return (
-    <div 
-      className="min-h-0 flex-1 overflow-y-auto p-4" 
-      ref={chatContainerRef}
-    >
+    <div className="min-h-0 flex-1 overflow-y-auto p-4" ref={chatContainerRef}>
       {messages.map((message) => (
         <MarketingChatMessage key={message.id} message={message} />
       ))}

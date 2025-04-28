@@ -15,11 +15,11 @@ export const siteConfig: SiteConfig = {
   name: "QTech",
   description:
     "Cutting-edge AI solutions for businesses. Empower your workflow with private AI knowledge bases, seamless integrations, and smart automation tools.",
-  url: "https://www.qtech.ai",
+  url: "https://www.qtech-company.com",
   images: {
-    default: "https://www.qtech.ai/og.png",
-    notFound: "https://www.qtech.ai/not-found.png",
-    logo: "https://www.qtech.ai/logo.jpg",
+    default: "https://www.qtech-company.com/og.png",
+    notFound: "https://www.qtech-company.com/not-found.png",
+    logo: "https://www.qtech-company.com/logo.jpg",
   },
   links: {
     twitter: "https://twitter.com/qtech",
@@ -27,8 +27,8 @@ export const siteConfig: SiteConfig = {
     facebook: "https://facebook.com/qtechAI",
     instagram: "https://instagram.com/qtech",
     linkedin: "https://linkedin.com/company/qtech",
-    contact: "https://www.qtech.ai/contact",
-    demo: "https://www.qtech.ai/demo",
+    contact: "https://www.qtech-company.com/contact",
+    demo: "https://www.qtech-company.com/demo",
     meet: "https://calendly.com/nicholas-torabi-qtech-company",
   },
   author: {
@@ -128,7 +128,7 @@ export const siteConfig: SiteConfig = {
             className="grayscale"
           />
         ),
-      }
+      },
     ],
   },
   bentoSection: {
@@ -886,7 +886,7 @@ export const siteConfig: SiteConfig = {
     backgroundImage: "/agent-cta-background.png",
     button: {
       text: "Get Started",
-      href:"https://calendly.com/nicholas-torabi-qtech-company"
+      href: "https://calendly.com/nicholas-torabi-qtech-company",
     },
     subtext: "",
   },

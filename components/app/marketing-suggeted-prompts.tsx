@@ -15,7 +15,7 @@ export function MarketingSuggestedPrompts({
     "How much does a chatbot implementation cost?",
     "Schedule a consultation",
     "What industries do you serve?",
-    "How do you ensure data privacy?"
+    "How do you ensure data privacy?",
   ]
 
   return (
