@@ -126,6 +126,7 @@ export function useContactChat() {
     messages,
     hasError: !!error,
     errorMessage: error?.message || "Something went wrong",
+    error,
     isLoading,
     isCancelling,
     showSuggestions,

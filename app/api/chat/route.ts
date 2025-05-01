@@ -39,7 +39,10 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error("Error in chat API:", error)
     return new Response(
-      JSON.stringify({ error: "An error occurred processing your request" }),
+      JSON.stringify({
+        error: "An error occurred processing your request",
+        details: error instanceof Error ? error.message : String(error),
+      }),
       {
         status: 500,
         headers: { "Content-Type": "application/json" },

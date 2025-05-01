@@ -9,7 +9,7 @@ interface ToolCallRecord {
 }
 
 const recentToolCalls = new Map<string, ToolCallRecord[]>()
-const RECENT_CALL_EXPIRY_MS = 60000 // 1 minute expiry time
+const RECENT_CALL_EXPIRY_MS = 5000 // 5 seconds expiry time
 const MAX_STORED_CALLS = 5 // Maximum stored calls per session
 
 /**
@@ -97,28 +97,44 @@ export function createProxiedTools(
       ...originalTool,
       // Override the tool's implementation to add duplicate detection
       implementation: async (parameters: ToolParameters) => {
-        // Check if this is a duplicate call
-        if (isDuplicateToolCall(sessionId, toolName, parameters)) {
-          console.log(`Prevented duplicate tool call: ${toolName}`, parameters)
-          // Return a message about the duplicate instead of running the tool
-          return {
-            content:
-              "This information was already provided. Please refer to previous responses.",
+        try {
+          if (isDuplicateToolCall(sessionId, toolName, parameters)) {
+            return {
+              content:
+                "This information was already provided. Please refer to previous responses.",
+            }
           }
-        }
 
-        // Record this tool call
-        recordToolCall(sessionId, toolName, parameters)
+          recordToolCall(sessionId, toolName, parameters)
 
-        // If it's not a duplicate, return the original implementation
-        if (typeof originalTool.implementation === "function") {
-          // We need to use unknown here because we can't guarantee parameter types
-          return await originalTool.implementation(parameters)
-        }
+          // If it's not a duplicate, return the original implementation
+          if (typeof originalTool.implementation === "function") {
+            try {
+              const result = await originalTool.implementation(parameters)
+              return result
+            } catch (toolError) {
+              console.error(
+                `Error in tool "${toolName}" implementation:`,
+                toolError
+              )
+              return {
+                content: `There was an issue processing your request with the ${toolName} tool. Please try again.`,
+              }
+            }
+          }
 
-        // Default implementation if none provided
-        return {
-          content: `Tool ${toolName} executed with parameters: ${JSON.stringify(parameters)}`,
+          console.warn(`No implementation found for tool "${toolName}"`)
+          return {
+            content: `Tool ${toolName} executed with parameters: ${JSON.stringify(parameters)}`,
+          }
+        } catch (proxyError) {
+          console.error(
+            `Unexpected error in tool proxy for "${toolName}":`,
+            proxyError
+          )
+          return {
+            content: `Unable to process your request at this time. Please try again later.`,
+          }
         }
       },
     }

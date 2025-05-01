@@ -12,16 +12,23 @@ export const tools = {
       purpose: z.string().describe("The purpose of collecting the email"),
     }),
     implementation: async (params: unknown) => {
-      // Type guard and actual implementation
-      if (
-        typeof params === "object" &&
-        params &&
-        "purpose" in params &&
-        typeof params.purpose === "string"
-      ) {
-        return { content: `Email saved for purpose: ${params.purpose}` }
+      try {
+        // Type guard and actual implementation
+        if (
+          typeof params === "object" &&
+          params &&
+          "purpose" in params &&
+          typeof params.purpose === "string"
+        ) {
+          return { content: `Email saved for purpose: ${params.purpose}` }
+        }
+        throw new Error(
+          `Invalid parameters for saveEmail: ${JSON.stringify(params)}`
+        )
+      } catch (error) {
+        console.error("Error in saveEmail tool:", error)
+        return { content: "Failed to save email. Please try again." }
       }
-      return { content: "Invalid parameters for saveEmail tool" }
     },
   },
   scheduleMeeting: {
@@ -35,19 +42,26 @@ export const tools = {
         .describe("The link to QTech's calendar"),
     }),
     implementation: async (params: unknown) => {
-      if (
-        typeof params === "object" &&
-        params &&
-        "purpose" in params &&
-        typeof params.purpose === "string" &&
-        "calendarLink" in params &&
-        typeof params.calendarLink === "string"
-      ) {
-        return {
-          content: `Meeting scheduled for purpose: ${params.purpose}, calendar link: ${params.calendarLink}`,
+      try {
+        if (
+          typeof params === "object" &&
+          params &&
+          "purpose" in params &&
+          typeof params.purpose === "string" &&
+          "calendarLink" in params &&
+          typeof params.calendarLink === "string"
+        ) {
+          return {
+            content: `Meeting scheduled for purpose: ${params.purpose}, calendar link: ${params.calendarLink}`,
+          }
         }
+        throw new Error(
+          `Invalid parameters for scheduleMeeting: ${JSON.stringify(params)}`
+        )
+      } catch (error) {
+        console.error("Error in scheduleMeeting tool:", error)
+        return { content: "Failed to schedule meeting. Please try again." }
       }
-      return { content: "Invalid parameters for scheduleMeeting tool" }
     },
   },
   generatePricing: {
@@ -59,19 +73,28 @@ export const tools = {
       timeline: z.string().describe("Expected timeline for the implementation"),
     }),
     implementation: async (params: unknown) => {
-      if (
-        typeof params === "object" &&
-        params &&
-        "features" in params &&
-        Array.isArray(params.features) &&
-        "timeline" in params &&
-        typeof params.timeline === "string"
-      ) {
+      try {
+        if (
+          typeof params === "object" &&
+          params &&
+          "features" in params &&
+          Array.isArray(params.features) &&
+          "timeline" in params &&
+          typeof params.timeline === "string"
+        ) {
+          return {
+            content: `Pricing generated for features: ${params.features.join(", ")}, timeline: ${params.timeline}`,
+          }
+        }
+        throw new Error(
+          `Invalid parameters for generatePricing: ${JSON.stringify(params)}`
+        )
+      } catch (error) {
+        console.error("Error in generatePricing tool:", error)
         return {
-          content: `Pricing generated for features: ${params.features.join(", ")}, timeline: ${params.timeline}`,
+          content: "Failed to generate pricing estimate. Please try again.",
         }
       }
-      return { content: "Invalid parameters for generatePricing tool" }
     },
   },
   getResume: {
@@ -83,16 +106,25 @@ export const tools = {
         .describe("The purpose for wanting company information"),
     }),
     implementation: async (params: unknown) => {
-      if (typeof params === "object" && params) {
-        const purpose =
-          "purpose" in params && typeof params.purpose === "string"
-            ? params.purpose
-            : "general inquiry"
+      try {
+        if (typeof params === "object" && params) {
+          const purpose =
+            "purpose" in params && typeof params.purpose === "string"
+              ? params.purpose
+              : "general inquiry"
+          return {
+            content: `Company information provided for purpose: ${purpose}`,
+          }
+        }
+        throw new Error(
+          `Invalid parameters for getResume: ${JSON.stringify(params)}`
+        )
+      } catch (error) {
+        console.error("Error in getResume tool:", error)
         return {
-          content: `Company information provided for purpose: ${purpose}`,
+          content: "Failed to retrieve company information. Please try again.",
         }
       }
-      return { content: "Company information provided for general inquiry" }
     },
   },
   providePlanInformation: {
@@ -108,21 +140,30 @@ export const tools = {
         .describe("Whether to include information about contacting options"),
     }),
     implementation: async (params: unknown) => {
-      if (
-        typeof params === "object" &&
-        params &&
-        "planName" in params &&
-        typeof params.planName === "string" &&
-        "includeContactOptions" in params &&
-        typeof params.includeContactOptions === "boolean"
-      ) {
+      try {
+        if (
+          typeof params === "object" &&
+          params &&
+          "planName" in params &&
+          typeof params.planName === "string" &&
+          "includeContactOptions" in params &&
+          typeof params.includeContactOptions === "boolean"
+        ) {
+          return {
+            content:
+              `Plan information provided for plan: ${params.planName}, ` +
+              `contact options ${params.includeContactOptions ? "included" : "not included"}`,
+          }
+        }
+        throw new Error(
+          `Invalid parameters for providePlanInformation: ${JSON.stringify(params)}`
+        )
+      } catch (error) {
+        console.error("Error in providePlanInformation tool:", error)
         return {
-          content:
-            `Plan information provided for plan: ${params.planName}, ` +
-            `contact options ${params.includeContactOptions ? "included" : "not included"}`,
+          content: "Failed to provide plan information. Please try again.",
         }
       }
-      return { content: "Invalid parameters for providePlanInformation tool" }
     },
   },
 } as const
