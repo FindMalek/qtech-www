@@ -95,6 +95,22 @@ export function MarketingToolPlanInformation({
     }, 100)
   }
 
+  const handleEstimatePilotPricingClick = () => {
+    const chatContext = getGlobalChatContext()
+    chatContext.setInput(
+      `I'm interested in the ${planName} plan and would like to estimate the pilot pricing`
+    )
+
+    setTimeout(() => {
+      const form = document.querySelector("form") as HTMLFormElement
+      if (form) {
+        form.dispatchEvent(
+          new Event("submit", { cancelable: true, bubbles: true })
+        )
+      }
+    }, 100)
+  }
+
   return (
     <Card className="bg-muted/30 overflow-hidden border shadow-md">
       <div className="p-4">
@@ -147,6 +163,13 @@ export function MarketingToolPlanInformation({
             <div className="flex flex-col gap-2 sm:flex-row">
               <Button onClick={handleScheduleClick} className="flex-1">
                 Schedule Consultation
+              </Button>
+              <Button
+                onClick={handleEstimatePilotPricingClick}
+                variant="outline"
+                className="flex-1"
+              >
+                Estimate Pilot Pricing
               </Button>
               <Button
                 onClick={handleContactClick}
