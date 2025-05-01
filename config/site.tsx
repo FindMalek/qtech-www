@@ -112,7 +112,7 @@ export const siteConfig: SiteConfig = {
             alt="Leckina"
             width={100}
             height={100}
-            className="grayscale"
+            className="brightness-0 grayscale dark:invert"
           />
         ),
       },
@@ -125,7 +125,7 @@ export const siteConfig: SiteConfig = {
             alt="AnyRM"
             width={100}
             height={100}
-            className="grayscale"
+            className="brightness-0 grayscale dark:invert"
           />
         ),
       },
@@ -138,7 +138,7 @@ export const siteConfig: SiteConfig = {
             alt="Inlisol"
             width={100}
             height={100}
-            className="fill-red-500  brightness-0 dark:invert"
+            className="brightness-0 dark:invert"
           />
         ),
       },
@@ -151,7 +151,7 @@ export const siteConfig: SiteConfig = {
             alt="Caucasus"
             width={100}
             height={100}
-            className="grayscale"
+            className="grayscale dark:invert"
           />
         ),
       },
@@ -164,7 +164,7 @@ export const siteConfig: SiteConfig = {
             alt="Atleis"
             width={100}
             height={100}
-            className="grayscale"
+            className="grayscale dark:invert"
           />
         ),
       },
