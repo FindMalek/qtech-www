@@ -63,6 +63,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           )}
         </div>
+
+        <Separator className="my-4" />
       </div>
     </div>
   )
