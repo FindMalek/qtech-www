@@ -10,7 +10,7 @@ export function MarketingSuggestedPrompts({
   onSuggestionClick,
 }: SuggestedPromptsProps) {
   const suggestions = [
-    "I need a custom chatbot solution",
+    "I’d like to explore integrating an Internal AI",
     "Tell me about your software development services",
     "How much does a chatbot implementation cost?",
     "Schedule a consultation",

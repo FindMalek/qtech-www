@@ -98,7 +98,7 @@ export function MarketingChatMessage({ message }: ChatMessageProps) {
         {isUser ? (
           <Icons.user className="m-2 size-5" />
         ) : (
-          <Icons.logo className="size-8 rounded-md p-1" />
+          <Icons.logo className="size-8 rounded-md p-1 dark:invert" />
         )}
       </div>
       <div

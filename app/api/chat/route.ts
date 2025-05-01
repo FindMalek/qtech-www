@@ -1,5 +1,5 @@
 import { groq } from "@ai-sdk/groq"
-import { streamText } from "ai"
+import { smoothStream, streamText } from "ai"
 
 import { ChatMessage } from "@/types"
 
@@ -32,7 +32,10 @@ export async function POST(req: Request) {
       system: getSystemPrompt(),
       tools: proxiedTools,
       experimental_toolCallStreaming: true,
-      maxSteps: 5,
+      experimental_transform: smoothStream({
+        delayInMs: 20,
+        chunking: "line",
+      }),
     })
 
     return result.toDataStreamResponse()

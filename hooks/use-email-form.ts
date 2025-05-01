@@ -63,10 +63,34 @@ export function useEmailForm(toolCall: ToolInvocation) {
 
     try {
       // Get the conversation history
-      const conversationHistory = messages.map((msg) => ({
-        role: msg.role,
-        message: msg.content,
-      }))
+
+      console.log(messages)
+
+      const conversationHistory = messages.map((msg) => {
+        // Base message structure
+        const messageObj = {
+          role: msg.role,
+          message: msg.content,
+        }
+
+        // Add tool invocation info if it exists
+        if (msg.toolInvocations?.length) {
+          return {
+            ...messageObj,
+            toolCall: msg.toolInvocations[0].toolName || "Tool Call",
+          }
+        } else if (msg.parts?.some((part) => part.type === "tool-invocation")) {
+          const toolPart = msg.parts.find(
+            (part) => part.type === "tool-invocation"
+          )
+          return {
+            ...messageObj,
+            toolCall: toolPart?.toolInvocation?.toolName || "Tool Call",
+          }
+        }
+
+        return messageObj
+      })
 
       const result = await sendContactEmailIntroduction(
         values.email,

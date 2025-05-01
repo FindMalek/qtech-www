@@ -98,7 +98,17 @@ const MarketingEmailIntroduction = ({
                       </Column>
                       <Column className="px-[8px]">
                         <Text className="m-0 inline-block max-w-[320px] rounded-[12px] border border-gray-200 bg-white p-[10px] text-[14px] leading-[20px] text-gray-800 shadow-sm">
-                          {item.message}
+                          {item.toolCall ? (
+                            <>
+                              <span className="font-semibold text-cyan-600">
+                                [{item.toolCall}]
+                              </span>
+                              <br />
+                              {item.message}
+                            </>
+                          ) : (
+                            item.message
+                          )}
                         </Text>
                       </Column>
                       <Column width="24px"></Column>

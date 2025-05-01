@@ -173,6 +173,7 @@ export type SiteConfig = {
 export interface ConversationHistory {
   role: string
   message: string
+  toolCall?: string
 }
 
 export interface ContactEmailIntroductionProps {

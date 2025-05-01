@@ -173,11 +173,11 @@ export const siteConfig: SiteConfig = {
         name: "OnAir Jets",
         logo: (
           <Image
-            src="/companies/on-air-jets.png"
+            src="/companies/on-air-jets.jpeg"
             alt="OnAir Jets"
             width={100}
             height={100}
-            className="grayscale"
+            className="grayscale dark:invert"
           />
         ),
       },
