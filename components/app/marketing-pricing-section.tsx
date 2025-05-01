@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { usePricingSelection } from "@/hooks/use-pricing-selection"
 
+import { Icons } from "@/components/shared/icons"
 import { SectionHeader } from "@/components/shared/section-header"
 
 export function MarketingPricingSection() {
@@ -101,41 +102,7 @@ export function MarketingPricingSection() {
                             "bg-muted-foreground/40 border-border"
                         )}
                       >
-                        <div className="flex size-3 items-center justify-center">
-                          <svg
-                            width="8"
-                            height="7"
-                            viewBox="0 0 8 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="block dark:hidden"
-                          >
-                            <path
-                              d="M1.5 3.48828L3.375 5.36328L6.5 0.988281"
-                              stroke="#101828"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-
-                          <svg
-                            width="8"
-                            height="7"
-                            viewBox="0 0 8 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="hidden dark:block"
-                          >
-                            <path
-                              d="M1.5 3.48828L3.375 5.36328L6.5 0.988281"
-                              stroke="#FAFAFA"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
+                        <Icons.check className="flex size-3 items-center justify-center stroke-[2.5px]" />
                       </div>
                       <span className="text-sm">{feature}</span>
                     </li>
