@@ -107,7 +107,6 @@ export type SitePricingItem = {
   name: string
   description: string
   price: string
-  href: string
   features: string[]
   buttonText: string
   buttonColor: string

@@ -150,9 +150,6 @@ export function sanitizeMessages(messages: ChatMessage[]): ChatMessage[] {
 
     // If message has a pending tool call, sanitize it
     if (hasPendingToolCall(message)) {
-      console.log("Found pending tool call, sanitizing message")
-
-      // Create a clean version of the message with better context reset hints for the model
       return {
         role: message.role,
         content: hasContextReset

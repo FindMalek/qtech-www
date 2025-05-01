@@ -89,9 +89,7 @@ export function MarketingPricingSection() {
               <hr className="border-border dark:border-white/20" />
               <div className="p-4">
                 {tier.name !== "Basic" && (
-                  <p className="mb-4 text-sm">
-                    Everything in {tier.name === "Pro" ? "Basic" : "Pro"} +
-                  </p>
+                  <p className="mb-4 text-sm">Everything in Basic +</p>
                 )}
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
