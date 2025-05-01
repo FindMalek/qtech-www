@@ -17,7 +17,7 @@ export function Footer() {
       <div className="flex flex-col p-10 md:flex-row md:items-center md:justify-between">
         <div className="mx-0 flex max-w-xs flex-col items-start justify-start gap-y-5">
           <Link href="/" className="flex items-center gap-2">
-            <Icons.logo className="size-8" />
+            <Icons.logo className="size-8 dark:invert" />
             <p className="text-primary text-xl font-semibold">
               {siteConfig.name}
             </p>

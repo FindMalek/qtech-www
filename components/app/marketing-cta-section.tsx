@@ -1,10 +1,45 @@
+"use client"
+
+import { useRef } from "react"
 import Image from "next/image"
-import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
+import { getGlobalChatContext } from "@/hooks/use-chat-with-tools"
 
 export function MarketingCTASection() {
   const { ctaSection } = siteConfig
+  const hasScrolledRef = useRef(false)
+
+  const handleCTAButtonClick = () => {
+    try {
+      const chatElement = document.getElementById("chat-container")
+      if (chatElement) {
+        hasScrolledRef.current = true
+        chatElement.scrollIntoView({ behavior: "smooth" })
+
+        setTimeout(() => {
+          const chatContext = getGlobalChatContext()
+          const message =
+            "I'd like to learn more about building a custom AI agent with QTech."
+
+          if (chatContext) {
+            chatContext.setInput(message)
+
+            setTimeout(() => {
+              const form = document.querySelector("form") as HTMLFormElement
+              if (form) {
+                form.dispatchEvent(
+                  new Event("submit", { cancelable: true, bubbles: true })
+                )
+              }
+            }, 100)
+          }
+        }, 800)
+      }
+    } catch (error) {
+      console.error("Error in handleCTAButtonClick:", error)
+    }
+  }
 
   return (
     <section
@@ -25,15 +60,12 @@ export function MarketingCTASection() {
               {ctaSection.title}
             </h1>
             <div className="absolute bottom-10 flex flex-col items-center justify-center gap-2">
-              <Link
-                href={ctaSection.button.href}
-                className="flex h-10 w-fit items-center justify-center rounded-full bg-white px-4 text-sm font-semibold text-black shadow-md"
+              <button
+                onClick={handleCTAButtonClick}
+                className="flex h-10 w-fit cursor-pointer items-center justify-center rounded-full bg-white px-4 text-sm font-semibold text-black shadow-md transition-all ease-out hover:bg-white/90 active:scale-95"
               >
                 {ctaSection.button.text}
-              </Link>
-              <span className="text-secondary-foreground/50 text-sm">
-                {ctaSection.subtext}
-              </span>
+              </button>
             </div>
           </div>
         </div>
