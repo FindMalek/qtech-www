@@ -2,7 +2,9 @@
 
 import React, { useRef, useState } from "react"
 import { motion } from "motion/react"
-
+import { usePathname } from "next/navigation"
+import Link from "next/link"
+import { redirect } from "next/navigation"
 import { siteConfig } from "@/config/site"
 
 interface NavItem {
@@ -13,12 +15,15 @@ interface NavItem {
 const navs: NavItem[] = siteConfig.nav.links
 
 export function NavMenu() {
+  const pathname = usePathname()
   const ref = useRef<HTMLUListElement>(null)
+
   const [left, setLeft] = useState(0)
   const [width, setWidth] = useState(0)
   const [isReady, setIsReady] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
   const [isManualScroll, setIsManualScroll] = useState(false)
+
 
   React.useEffect(() => {
     // Initialize with first nav item
@@ -79,6 +84,10 @@ export function NavMenu() {
   ) => {
     e.preventDefault()
 
+    if (!isHome) {
+      redirect("/")
+    }
+
     const targetId = item.href.substring(1)
     const element = document.getElementById(targetId)
 
@@ -112,6 +121,12 @@ export function NavMenu() {
     }
   }
 
+  const isHome = pathname === "/"
+
+  function stripesSlashFromHref(href: string) {
+    return href.replace(/\/$/, "")
+  }
+
   return (
     <div className="hidden w-full md:block">
       <ul
@@ -121,15 +136,17 @@ export function NavMenu() {
         {navs.map((item) => (
           <li
             key={item.name}
-            className={`z-10 flex h-full cursor-pointer items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-              activeSection === item.href.substring(1)
-                ? "text-primary"
-                : "text-primary/60 hover:text-primary"
-            } tracking-tight`}
+            className={`z-10 flex h-full cursor-pointer items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${activeSection === item.href.substring(1)
+              ? "text-primary"
+              : "text-primary/60 hover:text-primary"
+              } tracking-tight`}
           >
-            <a href={item.href} onClick={(e) => handleClick(e, item)}>
+            <Link
+              href={isHome ? stripesSlashFromHref(item.href) : item.href}
+              onClick={(e) => handleClick(e, item)}
+            >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
         {isReady && (

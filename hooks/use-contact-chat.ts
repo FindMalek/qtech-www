@@ -25,9 +25,20 @@ export function useContactChat() {
 
   // Check if message limit has been reached
   const isMessageLimitReached = messages.length >= MAX_MESSAGES_ALLOWED
-
-  // Keep input focused across all situations
+  
+  // Track if initial render has occurred
+  const [hasInitialized, setHasInitialized] = useState(false)
+  
+  // Set initialized flag after first render
   useEffect(() => {
+    setHasInitialized(true)
+  }, [])
+
+  // Keep input focused across all situations, but not on initial page load
+  useEffect(() => {
+    // Skip focusing on initial render to prevent page scroll
+    if (!hasInitialized) return
+    
     // Small delay to ensure DOM is ready and any operations are complete
     const focusTimer = setTimeout(() => {
       if (inputRef.current && !isMessageLimitReached) {
@@ -36,7 +47,7 @@ export function useContactChat() {
     }, 100)
 
     return () => clearTimeout(focusTimer)
-  }, [messages, isLoading, isCancelling, isMessageLimitReached])
+  }, [messages, isLoading, isCancelling, isMessageLimitReached, hasInitialized])
 
   // Handle form submission
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -87,7 +98,9 @@ export function useContactChat() {
 
   // Scroll to bottom whenever messages change
   useEffect(() => {
-    if (messages.length > 0) {
+    // Only scroll if there are messages and this isn't the initial load
+    // (messages.length > 1 ensures we don't scroll on the first system message)
+    if (messages.length > 2) {
       setTimeout(scrollToBottom, 100)
     }
   }, [messages])
@@ -115,9 +128,9 @@ export function useContactChat() {
         target: inputRef.current,
       } as React.ChangeEvent<HTMLInputElement>
       handleInputChange(event)
-
-      // Focus the input after selecting a suggestion
-      inputRef.current.focus()
+      
+      // Remove auto-focus when selecting a suggestion
+      // inputRef.current.focus()
     }
   }
 

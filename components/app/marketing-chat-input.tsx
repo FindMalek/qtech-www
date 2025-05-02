@@ -34,13 +34,13 @@ export function MarketingChatInput({
   return (
     <form onSubmit={handleFormSubmit} className="flex space-x-2">
       <Input
-        ref={inputRef}
         value={input}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         placeholder="Type your message..."
         className="flex-1"
         disabled={isLoading || isCancelling}
+        autoFocus={false}
       />
       <Button
         type="submit"

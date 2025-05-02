@@ -35,10 +35,16 @@ export function MarketingChatBot() {
     setGlobalChatContext(chatContext)
   }, [chatContext])
 
+  // Prevent auto-scrolling when component mounts
+  useEffect(() => {
+    // Ensure we're at the top of the page when the component loads
+    window.scrollTo(0, 0)
+  }, [])
+
   const chatContextForInput = {
     input,
     handleInputChange,
-    inputRef,
+    inputRef: { current: null },
     handleFormSubmit: (e: React.FormEvent) =>
       handleFormSubmit(e as React.FormEvent<HTMLFormElement>),
     handleKeyDown,
