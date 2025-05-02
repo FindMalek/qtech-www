@@ -798,16 +798,16 @@ export const siteConfig: SiteConfig = {
       title: "Company",
       links: [
         { id: 1, name: "About", href: "/company/about" },
-        { id: 2, name: "Story", href: "/company/story" },
-        { id: 3, name: "Team", href: "/company/team" },
+        // { id: 2, name: "Story", href: "/company/story" },
+        // { id: 3, name: "Team", href: "/company/team" },
       ],
     },
     {
       title: "Legal",
       links: [
         { id: 4, name: "Imprint", href: "/legal/imprint" },
-        { id: 5, name: "Data Privacy", href: "/legal/data-privacy" },
-        { id: 6, name: "Terms of Service", href: "/legal/terms-of-service" },
+        { id: 5, name: "Data Privacy", href: "/legal/data-policy" },
+        // { id: 6, name: "Terms of Service", href: "/legal/terms-of-service" },
       ],
     },
   ],
