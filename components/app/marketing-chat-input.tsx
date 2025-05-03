@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, KeyboardEvent, RefObject } from "react"
+import { ChangeEvent, FormEvent, KeyboardEvent } from "react"
 
 import { Icons } from "@/components/shared/icons"
 import { Button } from "@/components/ui/button"
@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 interface ChatContextProps {
   input: string
   handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void
-  inputRef: RefObject<HTMLInputElement | null>
   handleFormSubmit: (e: FormEvent) => void
   handleKeyDown: (e: KeyboardEvent<HTMLInputElement>) => void
 }
@@ -26,7 +25,6 @@ export function MarketingChatInput({
   const {
     input,
     handleInputChange,
-    inputRef,
     handleFormSubmit,
     handleKeyDown,
   } = chatContext

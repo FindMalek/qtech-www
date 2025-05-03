@@ -24,7 +24,6 @@ export function MarketingChatBot() {
     messagesEndRef,
     input,
     handleInputChange,
-    inputRef,
     handleFormSubmit,
     handleKeyDown,
     isMessageLimitReached,
@@ -44,7 +43,6 @@ export function MarketingChatBot() {
   const chatContextForInput = {
     input,
     handleInputChange,
-    inputRef: { current: null },
     handleFormSubmit: (e: React.FormEvent) =>
       handleFormSubmit(e as React.FormEvent<HTMLFormElement>),
     handleKeyDown,
