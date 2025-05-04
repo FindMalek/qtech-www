@@ -22,12 +22,8 @@ export function MarketingChatInput({
   isLoading,
   isCancelling,
 }: MarketingChatInputProps) {
-  const {
-    input,
-    handleInputChange,
-    handleFormSubmit,
-    handleKeyDown,
-  } = chatContext
+  const { input, handleInputChange, handleFormSubmit, handleKeyDown } =
+    chatContext
 
   return (
     <form onSubmit={handleFormSubmit} className="flex space-x-2">

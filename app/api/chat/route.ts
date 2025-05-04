@@ -1,4 +1,4 @@
-import { groq } from "@ai-sdk/groq"
+import { openai } from "@ai-sdk/openai"
 import { smoothStream, streamText } from "ai"
 
 import { ChatMessage } from "@/types"
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     const proxiedTools = createProxiedTools(tools, sessionId)
 
     const result = streamText({
-      model: groq("llama3-70b-8192"),
+      model: openai("gpt-4o-mini"),
       messages,
       temperature: 0.7,
       maxTokens: 1000,

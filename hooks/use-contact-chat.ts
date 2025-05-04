@@ -25,10 +25,10 @@ export function useContactChat() {
 
   // Check if message limit has been reached
   const isMessageLimitReached = messages.length >= MAX_MESSAGES_ALLOWED
-  
+
   // Track if initial render has occurred
   const [hasInitialized, setHasInitialized] = useState(false)
-  
+
   // Set initialized flag after first render
   useEffect(() => {
     setHasInitialized(true)
@@ -38,7 +38,7 @@ export function useContactChat() {
   useEffect(() => {
     // Skip focusing on initial render to prevent page scroll
     if (!hasInitialized) return
-    
+
     // Small delay to ensure DOM is ready and any operations are complete
     const focusTimer = setTimeout(() => {
       if (inputRef.current && !isMessageLimitReached) {
@@ -122,16 +122,18 @@ export function useContactChat() {
 
   // Handle suggestion clicks
   const handleSuggestionClick = (suggestion: string) => {
-    if (inputRef.current) {
-      inputRef.current.value = suggestion
-      const event = {
-        target: inputRef.current,
-      } as React.ChangeEvent<HTMLInputElement>
-      handleInputChange(event)
-      
-      // Remove auto-focus when selecting a suggestion
-      // inputRef.current.focus()
-    }
+    // Update the input in the AI chat context directly
+    chatContext.setInput(suggestion)
+    
+    // Then manually submit the chat with the suggestion
+    const fakeEvent = {
+      preventDefault: () => {},
+    } as React.FormEvent<HTMLFormElement>
+    
+    // Wait for the input to be set before submitting
+    setTimeout(() => {
+      handleFormSubmit(fakeEvent)
+    }, 50)
   }
 
   return {

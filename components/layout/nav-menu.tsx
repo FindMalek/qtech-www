@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useRef, useState } from "react"
-import { motion } from "motion/react"
-import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { redirect } from "next/navigation"
+import { redirect, usePathname } from "next/navigation"
+import { motion } from "motion/react"
+
 import { siteConfig } from "@/config/site"
 
 interface NavItem {
@@ -23,7 +23,6 @@ export function NavMenu() {
   const [isReady, setIsReady] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
   const [isManualScroll, setIsManualScroll] = useState(false)
-
 
   React.useEffect(() => {
     // Initialize with first nav item
@@ -136,10 +135,11 @@ export function NavMenu() {
         {navs.map((item) => (
           <li
             key={item.name}
-            className={`z-10 flex h-full cursor-pointer items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${activeSection === item.href.substring(1)
-              ? "text-primary"
-              : "text-primary/60 hover:text-primary"
-              } tracking-tight`}
+            className={`z-10 flex h-full cursor-pointer items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+              activeSection === item.href.substring(1)
+                ? "text-primary"
+                : "text-primary/60 hover:text-primary"
+            } tracking-tight`}
           >
             <Link
               href={isHome ? stripesSlashFromHref(item.href) : item.href}
