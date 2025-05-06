@@ -37,7 +37,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
     notFound()
   }
 
-  const { title, overview, html } = company
+  const { title, html } = company
 
   return (
     <div className="divide-border flex min-h-screen w-full flex-col justify-start divide-y pt-16 md:pt-24">
@@ -49,10 +49,6 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
             <h1 className="mb-2 text-left text-2xl font-bold sm:text-3xl md:mb-4 md:text-4xl">
               {title}
             </h1>
-
-            <p className="text-muted-foreground mb-4 text-left text-base sm:text-lg md:mb-8">
-              {overview}
-            </p>
           </div>
 
           <Separator className="my-4" />

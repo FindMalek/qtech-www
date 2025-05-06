@@ -615,7 +615,7 @@ export const siteConfig: SiteConfig = {
       title: "Company",
       links: [
         { id: 1, name: "About", href: "/company/about" },
-        // { id: 2, name: "Story", href: "/company/story" },
+        { id: 2, name: "Careers", href: "/career" },
         // { id: 3, name: "Team", href: "/company/team" },
       ],
     },
