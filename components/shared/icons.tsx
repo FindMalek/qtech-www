@@ -1,6 +1,7 @@
 import {
   AlertCircle,
   ArrowRight,
+  Brain,
   Calculator,
   Calendar,
   Check,
@@ -9,6 +10,7 @@ import {
   Mail,
   RefreshCw,
   Send,
+  Server,
   User,
   X,
 } from "lucide-react"
@@ -18,7 +20,9 @@ import { cn } from "@/lib/utils"
 export const Icons = {
   chevronLeft: ChevronLeft,
   mail: Mail,
+  brain: Brain,
   close: X,
+  server: Server,
   logo: ({ className }: { className?: string }) => (
     <svg
       className={cn("size-4 fill-[var(--secondary)]", className)}
