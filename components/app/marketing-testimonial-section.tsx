@@ -16,8 +16,8 @@ export function MarketingTestimonialSection() {
           Empower Your Workflow with AI
         </h2>
         <p className="text-muted-foreground text-balance text-center font-medium">
-          Ask your AI Agent for real-time collaboration, seamless integrations,
-          and actionable insights to streamline your operations.
+          Ask your personal AI anything you want to know about your organization
+          .
         </p>
       </SectionHeader>
       <MarketingSocialProofTestimonials testimonials={testimonials} />

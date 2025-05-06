@@ -62,17 +62,13 @@ export function MarketingHeroSection() {
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2.5">
-            <button
-              onClick={handlePrimaryButtonClick}
-              className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/80 flex h-9 cursor-pointer items-center justify-center rounded-full border border-white/[0.12] px-4 text-sm font-normal tracking-wide shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] transition-all ease-out active:scale-95"
-            >
-              {hero.cta.primary.text}
-            </button>
-            <Link
-              href={hero.cta.secondary.href}
-              className="text-primary dark:bg-background dark:hover:bg-background/80 flex h-10 w-32 items-center justify-center rounded-full border border-[#E5E7EB] bg-white px-5 text-sm font-normal tracking-wide transition-all ease-out hover:bg-white/80 active:scale-95 dark:border-[#27272A]"
-            >
-              {hero.cta.secondary.text}
+            <Link href={siteConfig.links.meet}>
+              <button
+                onClick={handlePrimaryButtonClick}
+                className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/80 flex h-9 cursor-pointer items-center justify-center rounded-full border border-white/[0.12] px-4 text-sm font-normal tracking-wide shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] transition-all ease-out active:scale-95"
+              >
+                {hero.cta.primary.text}
+              </button>
             </Link>
           </div>
         </div>

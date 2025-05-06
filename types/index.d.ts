@@ -47,7 +47,7 @@ export type SiteHero = {
   description: string
   cta: {
     primary: SiteCTA
-    secondary: SiteCTA
+    secondary?: SiteCTA
   }
 }
 

@@ -122,8 +122,9 @@ export function MarketingFirstBentoAnimation() {
             >
               <p className="text-sm">
                 Looks like everyone&apos;s busy!{" "}
-                <span className="font-medium text-blue-500">@qtech</span> can
-                you help me find the 2022 client onboarding process document?
+                <span className="font-medium text-blue-500">@internalAI</span>{" "}
+                can you help me find the 2022 client onboarding process
+                document?
               </p>
             </motion.div>
             <div className="bg-background border-border flex w-fit flex-shrink-0 items-center rounded-full border">

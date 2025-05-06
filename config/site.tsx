@@ -8,6 +8,7 @@ import { MarketingFourthBentoAnimation } from "@/components/app/marketing-fourth
 import { MarketingSecondBentoAnimation } from "@/components/app/marketing-second-bento-animation"
 import { MarketingThirdBentoAnimation } from "@/components/app/marketing-third-bento-animation"
 import { Highlight } from "@/components/shared/highlight"
+import { Icons } from "@/components/shared/icons"
 import { FlickeringGrid } from "@/components/ui/flickering-grid"
 import { Globe } from "@/components/ui/globe"
 
@@ -72,32 +73,15 @@ export const siteConfig: SiteConfig = {
     ],
   },
   hero: {
-    badgeIcon: (
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="fill-[#364153] dark:fill-white"
-      >
-        <path d="M7.62758 1.09876C7.74088 1.03404 7.8691 1 7.99958 1C8.13006 1 8.25828 1.03404 8.37158 1.09876L13.6216 4.09876C13.7363 4.16438 13.8316 4.25915 13.8979 4.37347C13.9642 4.48779 13.9992 4.6176 13.9992 4.74976C13.9992 4.88191 13.9642 5.01172 13.8979 5.12604C13.8316 5.24036 13.7363 5.33513 13.6216 5.40076L8.37158 8.40076C8.25828 8.46548 8.13006 8.49952 7.99958 8.49952C7.8691 8.49952 7.74088 8.46548 7.62758 8.40076L2.37758 5.40076C2.26287 5.33513 2.16753 5.24036 2.10123 5.12604C2.03492 5.01172 2 4.88191 2 4.74976C2 4.6176 2.03492 4.48779 2.10123 4.37347C2.16753 4.25915 2.26287 4.16438 2.37758 4.09876L7.62758 1.09876Z" />
-        <path d="M2.56958 7.23928L2.37758 7.34928C2.26287 7.41491 2.16753 7.50968 2.10123 7.624C2.03492 7.73831 2 7.86813 2 8.00028C2 8.13244 2.03492 8.26225 2.10123 8.37657C2.16753 8.49089 2.26287 8.58566 2.37758 8.65128L7.62758 11.6513C7.74088 11.716 7.8691 11.75 7.99958 11.75C8.13006 11.75 8.25828 11.716 8.37158 11.6513L13.6216 8.65128C13.7365 8.58573 13.8321 8.49093 13.8986 8.3765C13.965 8.26208 14 8.13211 14 7.99978C14 7.86745 13.965 7.73748 13.8986 7.62306C13.8321 7.50864 13.7365 7.41384 13.6216 7.34828L13.4296 7.23828L9.11558 9.70328C8.77568 9.89744 8.39102 9.99956 7.99958 9.99956C7.60814 9.99956 7.22347 9.89744 6.88358 9.70328L2.56958 7.23928Z" />
-        <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
-      </svg>
-    ),
-    badge: "Enterprise AI Knowledge Base Solutions",
-    title: "Secure, Intelligent AI for Your Business",
+    badgeIcon: <Icons.layer />,
+    badge: "Enterprise AI-Solutions",
+    title: "Internal AI for Your Business»",
     description:
       "QTech delivers AI solutions that understand and act on your internal data, tools, and processes—without compromising on privacy or security.",
     cta: {
       primary: {
         text: "Get a Demo",
         href: "https://calendly.com/nicholas-torabi-qtech-company",
-      },
-      secondary: {
-        text: "Learn More",
-        href: "/company/about",
       },
     },
   },
@@ -204,17 +188,10 @@ export const siteConfig: SiteConfig = {
       },
       {
         id: 3,
-        content: (
-          <MarketingThirdBentoAnimation
-            data={[20, 30, 25, 45, 40, 55, 75]}
-            toolTipValues={[
-              1234, 1678, 2101, 2534, 2967, 3400, 3833, 4266, 4700, 5133,
-            ]}
-          />
-        ),
-        title: "Business Intelligence",
+        content: <MarketingThirdBentoAnimation startAnimationDelay={0.2} />,
+        title: "Complex Data, Simplified",
         description:
-          "Transform raw business data into clear, actionable insights in seconds. Make smarter decisions with real-time, AI-powered intelligence.",
+          "Our internal AI breaks down complex data by detecting patterns, segmenting key elements, and turning them into clear, actionable insights.",
       },
       {
         id: 4,
@@ -242,7 +219,7 @@ export const siteConfig: SiteConfig = {
         id: 1,
         title: "Fully Private & Secure",
         content:
-          "Unlike generic GPT tools that run in the cloud and store your data externally, QTech's AI runs in your environment or private EU-based cloud. Your data stays 100% yours — no leaks, no surprises.",
+          "Unlike generic GPT tools that run in the cloud and store your data externally, our technology runs in your environment or private EU-based cloud. Your data stays 100% yours — no leaks, no surprises.",
         image:
           "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop",
       },
@@ -258,7 +235,7 @@ export const siteConfig: SiteConfig = {
         id: 3,
         title: "Deeply Integrated & Customised",
         content:
-          "Generic GPTs can't access your tools or understand your workflows. QTech connects to your CRM, ERP, email, and docs — and adapts to your department's specific needs.",
+          "Generic GPTs can't access your tools or understand your workflows. An internal AI connects seamlessly to your data sources—like CRM, ERP, or emails—is multimodal (handling text, PDFs, etc.), and adapts to the specific needs of each department.",
         image:
           "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070&auto=format&fit=crop",
       },
@@ -266,7 +243,7 @@ export const siteConfig: SiteConfig = {
         id: 4,
         title: "Handles Massive Data Loads",
         content:
-          "While ChatGPT might struggle with a few files, QTech processes millions of documents — cleanly, accurately, and contextually.",
+          "While ChatGPT might struggle with a few files, our internal AI can process millions of documents — cleanly, accurately, and contextually.",
         image:
           "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?q=80&w=2039&auto=format&fit=crop",
       },
@@ -274,7 +251,7 @@ export const siteConfig: SiteConfig = {
         id: 5,
         title: "Answers & Executes",
         content:
-          "Generic GPTs just reply. QTech's agents send emails, generate reports, create proposals, update systems — real execution, not just conversation.",
+          "Generic GPTs just reply. Our internal AI sends emails, generates reports, creates proposal, updates systems — real execution, not just conversation.",
         image:
           "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?q=80&w=2039&auto=format&fit=crop",
       },
@@ -565,7 +542,7 @@ export const siteConfig: SiteConfig = {
 
         title: "Enterprise-grade privacy. Your data stays yours.",
         description:
-          "Your AI runs inside your environment (or private cloud), with no third-party data sharing. We never train models on your data, and you control exactly what your AI can see and do.",
+          "Your AI runs inside your environment (or private cloud), with no third-party data sharing. We train models on the data You want, and You control exactly what Your AI can see and do.",
       },
       {
         id: 2,
@@ -577,7 +554,7 @@ export const siteConfig: SiteConfig = {
 
         title: "Smart Task Execution",
         description:
-          "Beyond answering — your agent acts. It doesn't just give you insights — it sends the email, drafts the proposal, logs the task, creates the report.",
+          "Beyond answering — our internal AI acts. It doesn't just give you insights — it sends the email, drafts the proposal, logs the task, creates the report.",
       },
     ],
   },

@@ -124,12 +124,12 @@ export function useContactChat() {
   const handleSuggestionClick = (suggestion: string) => {
     // Update the input in the AI chat context directly
     chatContext.setInput(suggestion)
-    
+
     // Then manually submit the chat with the suggestion
     const fakeEvent = {
       preventDefault: () => {},
     } as React.FormEvent<HTMLFormElement>
-    
+
     // Wait for the input to be set before submitting
     setTimeout(() => {
       handleFormSubmit(fakeEvent)
