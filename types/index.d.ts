@@ -103,6 +103,18 @@ export type SiteGrowthSection = {
   items: SiteGrowthItem[]
 }
 
+export type SiteUseCasesItem = {
+  name: string
+  description: string
+  icon: React.ReactNode
+}
+
+export type SiteUseCasesSection = {
+  title: string
+  description: string
+  items: SiteUseCasesItem[]
+}
+
 export type SitePricingItem = {
   name: string
   description: string
@@ -163,6 +175,7 @@ export type SiteConfig = {
   quoteSection: SiteQuoteSection
   featureSection: SiteFeatureSection
   growthSection: SiteGrowthSection
+  useCasesSection: SiteUseCasesSection
   pricing: SitePricingSection
   testimonials: SiteTestimonialSection
   footerLinks: SiteFooterLinks

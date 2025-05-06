@@ -355,6 +355,49 @@ export const siteConfig: SiteConfig = {
       },
     ],
   },
+  useCasesSection: {
+    title: "Use Cases",
+    description:
+      "Your internal AI becomes the brain of your company—ready to answer, assist, and accelerate.",
+    items: [
+      {
+        name: "Instant Answers",
+        description:
+          "Need a contract from 2015? Onboarding a new hire? Just ask—your AI finds it in seconds and explains it in plain language.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+      {
+        name: "Customer Support",
+        description:
+          "Equip your support team with instant access to internal knowledge. Faster replies, sharper answers, fewer escalations.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+      {
+        name: "Tool Integration",
+        description:
+          "Seamlessly integrate external tools and APIs into your agent workflows.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+      {
+        name: "Cross-Language Support",
+        description:
+          "Available in all major programming languages for maximum flexibility.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+      {
+        name: "Customizable Agents",
+        description:
+          "Design and customize agents to fit your specific use case and requirements.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+      {
+        name: "Efficient Execution",
+        description:
+          "Optimize agent performance with built-in efficiency and scalability features.",
+        icon: <Icons.brain className="h-6 w-6" />,
+      },
+    ],
+  },
   pricing: {
     title: "Simple Pricing for Every Business",
     description: "Choose the plan that fits your organization's needs.",

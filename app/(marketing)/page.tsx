@@ -10,6 +10,7 @@ import { MarketingHeroSection } from "@/components/app/marketing-hero-section"
 import { MarketingPricingSection } from "@/components/app/marketing-pricing-section"
 import { MarketingQuoteSection } from "@/components/app/marketing-quote-section"
 import { MarketingTestimonialSection } from "@/components/app/marketing-testimonial-section"
+import { MarketingUseCasesSection } from "@/components/app/marketing-use-cases-section"
 
 export const metadata: Metadata = {
   title: "Your Partner for Safe, Accurate Internal AI",
@@ -24,6 +25,7 @@ export default function MarketingPage() {
       <MarketingQuoteSection />
       <MarketingFeatureSection />
       <MarketingGrowthSection />
+      <MarketingUseCasesSection />
       <MarketingPricingSection />
       <MarketingTestimonialSection />
       <MarketingFAQSection />
