@@ -388,7 +388,7 @@ export const siteConfig: SiteConfig = {
         name: "Education",
         description:
           "Help students and staff navigate admin processes with fast, accurate answers.",
-        icon: <Icons.brain className="h-6 w-6" />,
+        icon: <Icons.education className="h-6 w-6" />,
       },
       {
         name: "Consulting",
