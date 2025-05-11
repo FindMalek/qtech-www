@@ -361,40 +361,40 @@ export const siteConfig: SiteConfig = {
       "Your internal AI becomes the brain of your company—ready to answer, assist, and accelerate.",
     items: [
       {
-        name: "Instant Answers",
+        name: "Legal",
         description:
-          "Need a contract from 2015? Onboarding a new hire? Just ask—your AI finds it in seconds and explains it in plain language.",
+          "Find old contracts, summarize case files, and prep for meetings in seconds.",
+        icon: <Icons.document className="h-6 w-6" />,
+      },
+      {
+        name: "E-Commerce",
+        description:
+          "Answer customer questions instantly with synced product, order, and policy data.",
+        icon: <Icons.shop className="h-6 w-6" />,
+      },
+      {
+        name: "Healthcare",
+        description:
+          "Give staff instant access to protocols, memos, and onboarding materials.",
+        icon: <Icons.health className="h-6 w-6" />,
+      },
+      {
+        name: "Construction",
+        description:
+          "Retrieve blueprints, safety docs, and project updates—right when needed.",
+        icon: <Icons.construction className="h-6 w-6" />,
+      },
+      {
+        name: "Education",
+        description:
+          "Help students and staff navigate admin processes with fast, accurate answers.",
         icon: <Icons.brain className="h-6 w-6" />,
       },
       {
-        name: "Customer Support",
-        description:
-          "Equip your support team with instant access to internal knowledge. Faster replies, sharper answers, fewer escalations.",
-        icon: <Icons.brain className="h-6 w-6" />,
-      },
-      {
-        name: "Tool Integration",
-        description:
-          "Seamlessly integrate external tools and APIs into your agent workflows.",
-        icon: <Icons.brain className="h-6 w-6" />,
-      },
-      {
-        name: "Cross-Language Support",
-        description:
-          "Available in all major programming languages for maximum flexibility.",
-        icon: <Icons.brain className="h-6 w-6" />,
-      },
-      {
-        name: "Customizable Agents",
-        description:
-          "Design and customize agents to fit your specific use case and requirements.",
-        icon: <Icons.brain className="h-6 w-6" />,
-      },
-      {
-        name: "Efficient Execution",
+        name: "Consulting",
         description:
           "Optimize agent performance with built-in efficiency and scalability features.",
-        icon: <Icons.brain className="h-6 w-6" />,
+        icon: <Icons.consulting className="h-6 w-6" />,
       },
     ],
   },
