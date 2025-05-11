@@ -38,7 +38,7 @@ export function MarketingUseCasesSection() {
               )}
             >
               <div className="flex flex-col items-center gap-y-2">
-                <div className="from-primary to-primary/80 group-hover:from-secondary group-hover:to-secondary/80 rounded-lg bg-gradient-to-b p-2 text-secondary-foreground transition-colors">
+                <div className="from-primary to-primary/80 group-hover:from-secondary group-hover:to-secondary/80 rounded-lg bg-gradient-to-b p-2 text-secondary transition-colors">
                   {Icon}
                 </div>
                 <h2 className="text-card-foreground text-balance text-center text-xl font-medium">
