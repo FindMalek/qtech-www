@@ -6,7 +6,7 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { getGlobalChatContext } from "@/hooks/use-chat-with-tools"
 
-import { MarketingChatBot } from "@/components/app/marketing-chat-bot"
+
 
 export function MarketingHeroSection() {
   const { hero } = siteConfig
@@ -74,7 +74,7 @@ export function MarketingHeroSection() {
         </div>
       </div>
       <div className="relative mt-10 px-6">
-        <MarketingChatBot />
+
       </div>
     </section>
   )
