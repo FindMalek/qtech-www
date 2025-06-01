@@ -637,6 +637,7 @@ export const siteConfig: SiteConfig = {
       href: "https://calendly.com/nicholas-torabi-qtech-company",
     },
     subtext: "",
+    email: "info@qtech-company.com",
   },
   faqSection: {
     title: "Frequently Asked Questions",
