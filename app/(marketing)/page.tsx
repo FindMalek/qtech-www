@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
 import { MarketingBentoSection } from "@/components/app/marketing-bento-section"
+import { MarketingBlogSection } from "@/components/app/marketing-blog-section"
 import { MarketingCompanyShowcase } from "@/components/app/marketing-company-showcase"
 import { MarketingCTASection } from "@/components/app/marketing-cta-section"
 import { MarketingFAQSection } from "@/components/app/marketing-faq-section"
@@ -29,6 +30,7 @@ export default function MarketingPage() {
       <MarketingPricingSection />
       <MarketingTestimonialSection />
       <MarketingFAQSection />
+      <MarketingBlogSection />
       <MarketingCTASection />
     </main>
   )

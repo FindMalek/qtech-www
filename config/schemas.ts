@@ -16,6 +16,18 @@ export const companySchema = z.object({
 
 export type CompanyRo = z.infer<typeof companySchema>
 
+export const blogSchema = z.object({
+  slug: z.string(),
+  title: z.string().min(1),
+  overview: z.string().min(1),
+  author: z.string().min(1),
+  date: z.string().min(1),
+  category: z.string().min(1),
+  readTime: z.string().min(1),
+})
+
+export type BlogRo = z.infer<typeof blogSchema>
+
 export const emailFormSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Invalid email address" }),
