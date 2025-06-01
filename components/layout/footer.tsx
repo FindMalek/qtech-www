@@ -25,6 +25,14 @@ export function Footer() {
           <p className="text-muted-foreground font-medium tracking-tight">
             {siteConfig.hero.description}
           </p>
+          <Link 
+            href={siteConfig.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Icons.linkedin className="size-5" />
+          </Link>
         </div>
         <div className="pt-5 md:w-1/3">
           <div className="flex flex-col items-start justify-start gap-y-5 md:flex-row md:items-center md:justify-between lg:pl-10">

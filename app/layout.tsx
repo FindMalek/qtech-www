@@ -11,6 +11,7 @@ import { LayoutWrapper } from "@/components/layout/layout-wrapper"
 import { Navbar } from "@/components/layout/navbar"
 import { TailwindIndicator } from "@/components/layout/tailwind-indicator"
 import { Toaster } from "@/components/ui/sonner"
+import { NewsletterPopupProvider } from "@/components/app/newsletter-popup-provider"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Analytics />
           <Toaster />
           <TailwindIndicator />
+          <NewsletterPopupProvider />
         </LayoutWrapper>
       </body>
     </html>

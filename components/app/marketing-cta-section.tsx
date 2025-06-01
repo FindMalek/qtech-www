@@ -1,44 +1,49 @@
 "use client"
 
-import { useRef } from "react"
 import Image from "next/image"
+import { toast } from "sonner"
 
 import { siteConfig } from "@/config/site"
-import { getGlobalChatContext } from "@/hooks/use-chat-with-tools"
+import { useCopyClipboard } from "@/hooks/use-copy-clipboard"
 
 export function MarketingCTASection() {
   const { ctaSection } = siteConfig
-  const hasScrolledRef = useRef(false)
+  const { copy } = useCopyClipboard()
 
-  const handleCTAButtonClick = () => {
-    try {
-      const chatElement = document.getElementById("chat-container")
-      if (chatElement) {
-        hasScrolledRef.current = true
-        chatElement.scrollIntoView({ behavior: "smooth" })
+  // const handleCTAButtonClick = () => {
+  //   try {
+  //     const chatElement = document.getElementById("chat-container")
+  //     if (chatElement) {
+  //       hasScrolledRef.current = true
+  //       chatElement.scrollIntoView({ behavior: "smooth" })
 
-        setTimeout(() => {
-          const chatContext = getGlobalChatContext()
-          const message =
-            "I'd like to learn more about building a custom AI agent with QTech."
+  //       setTimeout(() => {
+  //         const chatContext = getGlobalChatContext()
+  //         const message =
+  //           "I'd like to learn more about building a custom AI agent with QTech."
 
-          if (chatContext) {
-            chatContext.setInput(message)
+  //         if (chatContext) {
+  //           chatContext.setInput(message)
 
-            setTimeout(() => {
-              const form = document.querySelector("form") as HTMLFormElement
-              if (form) {
-                form.dispatchEvent(
-                  new Event("submit", { cancelable: true, bubbles: true })
-                )
-              }
-            }, 100)
-          }
-        }, 800)
-      }
-    } catch (error) {
-      console.error("Error in handleCTAButtonClick:", error)
-    }
+  //           setTimeout(() => {
+  //             const form = document.querySelector("form") as HTMLFormElement
+  //             if (form) {
+  //               form.dispatchEvent(
+  //                 new Event("submit", { cancelable: true, bubbles: true })
+  //               )
+  //             }
+  //           }, 100)
+  //         }
+  //       }, 800)
+  //     }
+  //   } catch (error) {
+  //     console.error("Error in handleCTAButtonClick:", error)
+  //   }
+  // }
+
+  const handleCTAButtonClick = async () => {
+    await copy(ctaSection.email)
+    toast.success(`Email address copied! Reach out to us at ${ctaSection.email}`)
   }
 
   return (

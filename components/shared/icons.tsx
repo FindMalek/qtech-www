@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ConstructionIcon,
   GraduationCap,
+  Linkedin,
   HeartPulseIcon,
   Loader2,
   Mail,
@@ -25,6 +26,7 @@ import { cn } from "@/lib/utils"
 
 export const Icons = {
   chevronLeft: ChevronLeft,
+  linkedin: Linkedin,
   mail: Mail,
   brain: Brain,
   close: X,

@@ -152,6 +152,7 @@ export type SiteCTASection = {
   button: SiteCTA
   subtext: string
   backgroundImage: string
+  email: string
 }
 
 export type SiteFAQSection = {
