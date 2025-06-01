@@ -45,9 +45,7 @@ export function MarketingHeroSection() {
   return (
     <section id="hero" className="relative w-full">
       <div className="relative flex w-full flex-col items-center px-6">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 -z-10 h-[600px] w-full rounded-b-xl [background:radial-gradient(125%_125%_at_50%_10%,var(--background)_40%,var(--secondary)_100%)] md:h-[800px]"></div>
-        </div>
+
         <div className="relative z-10 mx-auto flex h-full w-full max-w-3xl flex-col items-center justify-center gap-10 pt-32">
           <p className="border-border bg-accent flex h-8 items-center gap-2 rounded-full border px-3 text-sm">
             {hero.badgeIcon}
