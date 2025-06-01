@@ -1,17 +1,13 @@
 "use client"
 
-import { useRef } from "react"
 import Image from "next/image"
-import Link from "next/link"
 import { toast } from "sonner"
 
 import { siteConfig } from "@/config/site"
-import { getGlobalChatContext } from "@/hooks/use-chat-with-tools"
 import { useCopyClipboard } from "@/hooks/use-copy-clipboard"
 
 export function MarketingCTASection() {
   const { ctaSection } = siteConfig
-  const hasScrolledRef = useRef(false)
   const { copy } = useCopyClipboard()
 
   // const handleCTAButtonClick = () => {
