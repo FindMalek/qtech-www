@@ -4,7 +4,6 @@ import { MarketingBentoSection } from "@/components/app/marketing-bento-section"
 import { MarketingBlogSection } from "@/components/app/marketing-blog-section"
 import { MarketingCompanyShowcase } from "@/components/app/marketing-company-showcase"
 import { MarketingCTASection } from "@/components/app/marketing-cta-section"
-import { MarketingFAQSection } from "@/components/app/marketing-faq-section"
 import { MarketingFeatureSection } from "@/components/app/marketing-feature-section"
 import { MarketingGrowthSection } from "@/components/app/marketing-growth-section"
 import { MarketingHeroSection } from "@/components/app/marketing-hero-section"
@@ -29,7 +28,6 @@ export default function MarketingPage() {
       <MarketingUseCasesSection />
       <MarketingPricingSection />
       <MarketingTestimonialSection />
-      <MarketingFAQSection />
       <MarketingBlogSection />
       <MarketingCTASection />
     </main>

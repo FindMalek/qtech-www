@@ -6,8 +6,6 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { getGlobalChatContext } from "@/hooks/use-chat-with-tools"
 
-
-
 export function MarketingHeroSection() {
   const { hero } = siteConfig
   const hasScrolledRef = useRef(false)
@@ -71,9 +69,7 @@ export function MarketingHeroSection() {
           </div>
         </div>
       </div>
-      <div className="relative mt-10 px-6">
-
-      </div>
+      <div className="relative mt-10 px-6"></div>
     </section>
   )
 }

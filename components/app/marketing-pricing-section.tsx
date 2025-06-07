@@ -49,12 +49,12 @@ export function MarketingPricingSection() {
         </p>
       </SectionHeader>
       <div className="relative h-full w-full">
-        <div className="mx-auto grid w-full max-w-6xl gap-4 px-6 min-[650px]:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-2xl gap-4 px-6">
           {siteConfig.pricing.pricingItems.map((tier) => (
             <div
               key={tier.name}
               className={cn(
-                "relative grid h-fit grid-rows-[180px_auto_1fr] rounded-xl min-[650px]:h-full min-[900px]:h-fit",
+                "relative grid h-fit grid-rows-[180px_auto_1fr] rounded-xl",
                 tier.isPopular
                   ? "bg-accent md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)]"
                   : "border-border border bg-[#F3F4F6] dark:bg-[#F9FAFB]/[0.02]"
@@ -77,7 +77,16 @@ export function MarketingPricingSection() {
 
               <div className="flex flex-col gap-2 p-4">
                 <button
-                  onClick={() => selectPricingTier(tier.name)}
+                  onClick={() => {
+                    if (tier.buttonText === "Speak with us") {
+                      window.open(
+                        "https://calendly.com/nicholas-torabi-qtech-company",
+                        "_blank"
+                      )
+                    } else {
+                      selectPricingTier(tier.name)
+                    }
+                  }}
                   className={`flex h-10 w-full cursor-pointer items-center justify-center rounded-full px-4 text-sm font-normal tracking-wide transition-all ease-out active:scale-95 ${
                     tier.isPopular
                       ? `${tier.buttonColor} shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)]`
@@ -89,9 +98,7 @@ export function MarketingPricingSection() {
               </div>
               <hr className="border-border dark:border-white/20" />
               <div className="p-4">
-                {tier.name !== "Basic" && (
-                  <p className="mb-4 text-sm">Everything in Basic +</p>
-                )}
+                <p className="mb-4 text-sm font-medium">What&apos;s included:</p>
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">

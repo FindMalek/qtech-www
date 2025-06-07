@@ -399,44 +399,29 @@ export const siteConfig: SiteConfig = {
     ],
   },
   pricing: {
-    title: "Simple Pricing for Every Business",
-    description: "Choose the plan that fits your organization's needs.",
+    title: "Pricing",
+    description:
+      "We offer fully customized AI solutions tailored to your business needs — from secure, private GPTs to fully autonomous AI agents. Whether you're a startup or an enterprise, we'll design the right system for your data, infrastructure, and goals.",
     pricingItems: [
       {
-        name: "Basic",
-        price: "1499€",
-        features: [
-          "Access to a dedicated, private GPT with custom context",
-          "Cloud solution for a dedicated ChatBot",
-          "Multiple individual files, CSV, Docx, EPUB, JSON, JSONLines, Notion markdown export.",
-          "GitHub, Google Cloud Storage, Notion API, S3 File, PDFLoader, PPTX, TextLoader",
-          "Limited document processing capabilities",
-          "Standard support",
-        ],
-        description:
-          "Ideal for startups and small teams ready to build secure AI tools with a dedicated cloud-based ChatBot solution.",
-        buttonText: "Get started",
-        buttonColor: "bg-muted-foreground/20 text-secondary-foreground",
-        isPopular: true,
-      },
-
-      {
-        name: "Completely Customizable",
+        name: "Custom",
         price: "Custom",
         features: [
-          "Custom-built, fully autonomous AI agents",
-          "Hosted in your enterprise environment or EU cloud",
-          "Process thousands of documents with high accuracy",
-          "Full integration with internal ERP and CRM systems",
-          "Automated tasks: send emails, read data, save data, etc.",
-          "Enterprise-grade security, GDPR-compliant",
+          "Access to a dedicated, private GPT with custom context",
+          "Support for multiple file types (CSV, DOCX, EPUB, JSON, JSONLines, etc.)",
+          "Integrations with Confluence, GitHub, Notion, Google Cloud Storage, S3, and more",
+          "Fully autonomous, custom-built AI agents",
+          "Advanced document processing at scale (up to 100,000+ files)",
+          "Integration with your internal ERP, CRM, and custom tools",
+          "GDPR-compliant, enterprise-grade security",
           "Premium support & onboarding",
+          "Optional: Automated task execution (e.g. send emails, extract data, update systems)",
         ],
         description:
-          "Fully customized solutions for mid-size to large organizations, offering a secure and private AI agent capable of autonomous task execution.",
+          "Pricing is tailored based on your data volume, integrations complexity, hosting preferences, and level of customization needed.",
         buttonText: "Speak with us",
         buttonColor: "bg-primary text-primary-foreground",
-        isPopular: false,
+        isPopular: true,
       },
     ],
   },

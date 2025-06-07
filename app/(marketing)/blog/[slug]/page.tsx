@@ -64,7 +64,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             </h1>
 
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By {author}</span>
+              <span>By  {author}</span>
               <span>•</span>
               <time dateTime={date}>{formattedDate}</time>
             </div>
