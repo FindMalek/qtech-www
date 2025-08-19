@@ -4,7 +4,6 @@ import { z } from "zod"
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production"]),
-    OPENAI_API_KEY: z.string().min(1).startsWith("sk-"),
     RESEND_API_KEY: z.string().min(1).startsWith("re_"),
   },
   client: {
@@ -13,7 +12,6 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_LOGO_DEV_TOKEN: process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN,
-    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
   },
 })
